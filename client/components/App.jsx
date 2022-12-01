@@ -2,17 +2,25 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 import Nav from './Nav'
-import Fruits from './Fruits'
+import Home from './Home'
+import About from './About'
 import Profile from './Profile'
+import OwnerForm from './OwnerForm'
+import DogList from './DogList'
+import WalkerForm from './WalkerForm'
 
 function App() {
   return (
     <>
       <Nav />
-      <main className="flex items-center justify-center h-screen">
+      <main className="main">
         <Routes>
-          <Route path="/" element={<Fruits />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/dogowner" element={<OwnerForm />} />
+          <Route path="/doglist" element={<DogList />} />
+          <Route path="/dogwalker" element={<WalkerForm />} />
         </Routes>
       </main>
     </>

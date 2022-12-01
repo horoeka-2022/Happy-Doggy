@@ -26,25 +26,38 @@ function Nav() {
 
   return (
     <>
-      <section className="bg-slate-600 text-white flex justify-between items-center">
-        <h1 className="mx-4 font-bold text-2xl">Fruit FTW!</h1>
-        <nav className="flex justify-end  gap-4 px-4">
-          <Link to="/">Home</Link>
-          <IfAuthenticated>
-            <Link to="/profile">Profile</Link>
-            <Link to="/" onClick={handleLogoff}>
-              Log off
+      <section className="nav-container">
+        <nav className="nav">
+          <div className="rounded-full ...">
+            <Link className="logo" to="/">
+              <img
+                src="./server/public/images/Happy Doggy Logo.png"
+                alt="dog pic"
+                width="80"
+                height="70"
+
+                // className="navbar-logo"
+              />
             </Link>
-            <p>{!isLoading && <span>{user?.email}</span>}</p>
-          </IfAuthenticated>
-          <IfNotAuthenticated>
-            <Link to="/" onClick={handleSignIn}>
-              Sign In
-            </Link>
-            <Link to="/" onClick={handleRegister}>
-              Register
-            </Link>
-          </IfNotAuthenticated>
+          </div>
+          <div>
+            <IfAuthenticated className="user-nav">
+              <Link to="/profile">Profile</Link>
+              <Link to="/" onClick={handleLogoff}>
+                Log off
+              </Link>
+              <p>{!isLoading && <span>{user?.email}</span>}</p>
+            </IfAuthenticated>
+
+            <IfNotAuthenticated className="guest-nav">
+              <Link className="signin" to="/" onClick={handleSignIn}>
+                Sign In
+              </Link>
+              <Link className="register" to="/" onClick={handleRegister}>
+                Register
+              </Link>
+            </IfNotAuthenticated>
+          </div>
         </nav>
       </section>
     </>
