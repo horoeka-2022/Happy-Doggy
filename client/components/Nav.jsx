@@ -26,26 +26,31 @@ function Nav() {
 
   return (
     <>
-      <section className="bg-slate-600 text-white flex justify-between items-center">
-        <h1 className="mx-4 font-bold text-2xl">Fruit FTW!</h1>
-        <nav className="flex justify-end  gap-4 px-4">
-          <Link to="/">Home</Link>
-          <IfAuthenticated>
-            <Link to="/profile">Profile</Link>
-            <Link to="/" onClick={handleLogoff}>
-              Log off
-            </Link>
-            <p>{!isLoading && <span>{user?.email}</span>}</p>
-          </IfAuthenticated>
-          <IfNotAuthenticated>
-            <Link to="/" onClick={handleSignIn}>
-              Sign In
-            </Link>
-            <Link to="/" onClick={handleRegister}>
-              Register
-            </Link>
-          </IfNotAuthenticated>
+      <section className="nav-container">
+        <nav className="nav">
+          <Link className="logo" to="/">
+            Logo
+          </Link>
+          <div>
+            <IfAuthenticated className="user-nav">
+              <Link to="/profile">Profile</Link>
+              <Link to="/" onClick={handleLogoff}>
+                Log off
+              </Link>
+              <p>{!isLoading && <span>{user?.email}</span>}</p>
+            </IfAuthenticated>
+
+            <IfNotAuthenticated className="guest-nav">
+              <Link className="signin" to="/" onClick={handleSignIn}>
+                Sign In
+              </Link>
+              <Link className="register" to="/" onClick={handleRegister}>
+                Register
+              </Link>
+            </IfNotAuthenticated>
+          </div>
         </nav>
+        <h1 className="heading">Intro</h1>
       </section>
     </>
   )
