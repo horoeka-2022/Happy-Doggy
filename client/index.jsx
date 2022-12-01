@@ -10,10 +10,10 @@ import store from './slices'
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <Auth0Provider
-      domain="dev-l15ujwk4.au.auth0.com"
-      clientId="W1zHcnGihSz4yraMmDFQ8NNrOQsOjFEW"
+      domain="horoeka-22-rebecca.au.auth0.com"
+      clientId="02m0wmAWGZoWCf1mxq1Q9c5knmlP6gNA"
       redirectUri={window.location.origin}
-      audience="https://fruits/api"
+      audience="https://happydoggy/api"
     >
       <Provider store={store}>
         <Router>

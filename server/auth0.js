@@ -2,13 +2,12 @@ const jwt = require('express-jwt')
 const jwks = require('jwks-rsa')
 const { ManagementClient } = require('auth0')
 const dotenv = require('dotenv')
-const request = require('superagent')
 
 dotenv.config()
 
 // TODO: set the domain and audience (API Identifier)
-const domain = 'https://dev-l15ujwk4.au.auth0.com'
-const audience = 'https://fruits/api'
+const domain = 'https://horoeka-22-rebecca.au.auth0.com'
+const audience = 'https://happydoggy/api'
 const checkJwt = jwt({
   secret: jwks.expressJwtSecret({
     cache: true,
@@ -22,9 +21,9 @@ const checkJwt = jwt({
 })
 
 // https://auth0.github.io/node-auth0/ManagementClient.html
-const managementDomain = 'dev-l15ujwk4.au.auth0.com'
-const managementAudience = 'https://dev-l15ujwk4.au.auth0.com/api/v2/'
-const clientId = 'EqeUttJVHV41MvTLpMJZK1S6oGCyILz6'
+const managementDomain = 'horoeka-22-rebecca.au.auth0.com'
+const managementAudience = 'https://horoeka-22-rebecca.au.auth0.com/api/v2/'
+const clientId = '3A2A9WUjCtFd6LjaWoyeDqXqKZ61pTjs'
 const clientSecret = process.env.AUTH0_API_SECRET || 'empty-secret'
 const scope = 'read:users'
 
@@ -46,6 +45,7 @@ async function getUser(id) {
 }
 
 async function updateUser(id, userDetails) {
+  console.log(userDetails)
   await management.updateUserMetadata(
     { id },
     { user_metadata: { ...userDetails } }

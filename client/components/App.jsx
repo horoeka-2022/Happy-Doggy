@@ -2,16 +2,16 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 import Nav from './Nav'
-import Fruits from './Fruits'
 import Profile from './Profile'
+import Home from './Home'
 
 function App() {
   return (
     <>
       <Nav />
-      <main className="flex items-center justify-center h-screen">
+      <main className="">
         <Routes>
-          <Route path="/" element={<Fruits />} />
+          <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </main>
