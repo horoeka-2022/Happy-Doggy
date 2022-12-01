@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link } from 'react-router-dom'
+// rebecca added browswerrouter line 2.
 import { useAuth0 } from '@auth0/auth0-react'
 
 import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
