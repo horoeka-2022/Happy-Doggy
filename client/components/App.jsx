@@ -2,8 +2,9 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 import Nav from './Nav'
-import Profile from './Profile'
+
 import Home from './Home'
+import Walker from './Walker'
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <main className="">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/walker" element={<Walker />} />
         </Routes>
       </main>
     </>
