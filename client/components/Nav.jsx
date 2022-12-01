@@ -50,7 +50,6 @@ function Nav() {
             </IfNotAuthenticated>
           </div>
         </nav>
-        <h1 className="heading">Intro</h1>
       </section>
     </>
   )

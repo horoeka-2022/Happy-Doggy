@@ -17,17 +17,15 @@ router.get('/', checkJwt, (req, res) => {
   }
 })
 
-router.post('/', checkJwt, (req, res) => {
+router.post('/', checkJwt, async (req, res) => {
   const auth0_id = req.user?.sub
-  const { color } = req.body
+  const { color, address } = req.body
   const userDetails = {
+    address,
     color,
   }
 
-  updateUser(auth0_id, userDetails).then((metadata) => {
-    console.log(metadata)
-  })
-
+  await updateUser(auth0_id, userDetails)
   res.sendStatus(201)
 })
 

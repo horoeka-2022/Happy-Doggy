@@ -3,14 +3,20 @@ import React, { useEffect, useState } from 'react'
 import { getUser, updateUser } from '../api'
 
 function Profile() {
-  const { getAccessTokenSilently, user } = useAuth0()
-  const [form, setForm] = useState({ color: '' })
+  const { getAccessTokenSilently } = useAuth0()
+  const [form, setForm] = useState({ color: '', address: '' })
 
   useEffect(() => {
     getAccessTokenSilently()
       .then(getUser)
       .then((userDetails) => {
-        setForm(() => ({ color: userDetails.user_metadata.color }))
+        setForm(() => ({
+          color: userDetails?.user_metadata?.color,
+          address: userDetails?.user_metadata?.address,
+        }))
+      })
+      .catch((err) => {
+        console.error(err.message)
       })
   }, [])
 
@@ -27,13 +33,14 @@ function Profile() {
   return (
     <>
       <form className="flex flex-col justify-start gap-1">
-        <label htmlFor="authId">
-          Auth0Id
-          <span className="ml-4 font-bold">{user?.sub}</span>
-        </label>
-        <label htmlFor="email">
-          Email
-          <span className="ml-4 font-bold">{user?.email}</span>
+        <label htmlFor="address">
+          Address
+          <input
+            type="text"
+            name="address"
+            value={form.address}
+            onChange={handleChange}
+          />
         </label>
         <label htmlFor="color">
           What's your favourite color
