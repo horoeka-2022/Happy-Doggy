@@ -28,9 +28,18 @@ function Nav() {
     <>
       <section className="nav-container">
         <nav className="nav">
-          <Link className="logo" to="/">
-            Logo
-          </Link>
+          <div className="rounded-full ...">
+            <Link className="logo" to="/">
+              <img
+                src="./server/public/images/Happy Doggy Logo.png"
+                alt="dog pic"
+                width="80"
+                height="70"
+
+                // className="navbar-logo"
+              />
+            </Link>
+          </div>
           <div>
             <IfAuthenticated className="user-nav">
               <Link to="/profile">Profile</Link>
