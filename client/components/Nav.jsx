@@ -32,12 +32,9 @@ function Nav() {
           <div className="rounded-full ...">
             <Link className="logo" to="/">
               <img
-                src="./server/public/images/Happy Doggy Logo.png"
+                src="./server/public/images/logo.png"
                 alt="dog pic"
-                width="80"
-                height="70"
-
-                // className="navbar-logo"
+                className="nav-logo"
               />
             </Link>
           </div>
@@ -51,6 +48,15 @@ function Nav() {
             </IfAuthenticated>
 
             <IfNotAuthenticated className="guest-nav">
+              <Link className="logo" to="/">
+                Home
+              </Link>
+              <Link className="logo" to="/about">
+                About
+              </Link>
+              <Link className="logo" to="/doglist">
+                Doglist
+              </Link>
               <Link className="signin" to="/" onClick={handleSignIn}>
                 Sign In
               </Link>
