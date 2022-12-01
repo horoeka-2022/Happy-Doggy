@@ -1,6 +1,6 @@
 exports.up = (knex) => {
   return knex.schema.createTable('walker', (table) => {
-    table.increments('walker_id')
+    table.increments('id')
     table.string('description')
     table.string('auth0_id')
   })
