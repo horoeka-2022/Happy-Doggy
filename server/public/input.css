@@ -32,20 +32,27 @@ body {
   padding: 0 3rem;
 }
 
+.nav a {
+  font-size: 3rem;
+  text-decoration: none;
+  color: #000;
+}
+
 .nav-logo {
   width: 12rem;
 }
 
-.logo {
-  margin-right: 10rem;
+.links {
+  display: flex;
+  gap: 2rem;
+  
 }
 
-.guest-nav {
-  margin-left: 3rem;
-}
+.links a {
+  background-color: aliceblue;
+  border-radius: 4rem;
+  padding: 1.2rem;
 
-.register {
-  margin-left: 3rem;
 }
 
 /* Home Page */
