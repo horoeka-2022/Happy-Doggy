@@ -20,7 +20,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/dogowner" element={<OwnerForm />} />
           <Route path="/doglist" element={<DogList />} />
-          <Route path="/dogwalker" element={<WalkerForm />} />
+          <Route path="/walkerform" element={<WalkerForm />} />
         </Routes>
       </main>
     </>
