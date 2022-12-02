@@ -12,8 +12,9 @@ export default function Home() {
 
   return (
     <>
-      <h1 className="heading heading-primary">This is Happy Doggy Homepage</h1>
-      <h2 className="heading heading-secondary">We love dogs!!</h2>
+      <h1 className="heading heading-primary">
+        How would you like to be happy??
+      </h1>
 
       <div className="card-container">
         <div className="card card-owner">
