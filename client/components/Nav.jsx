@@ -36,29 +36,29 @@ function Nav() {
               />
             </Link>
           </div>
-          <div>
+          <div className="links">
+            <Link className="logo" to="/">
+              Home
+            </Link>
+            <Link className="logo" to="/about">
+              About
+            </Link>
+            <Link className="logo" to="/doglist">
+              Doglist
+            </Link>
             <IfAuthenticated className="user-nav">
               <Link to="/profile">Profile</Link>
               <Link to="/" onClick={handleLogoff}>
                 Log off
               </Link>
-              <p>{!isLoading && <span>{user?.email}</span>}</p>
+              {/* <p>{!isLoading && <span>{user?.email}</span>}</p> */}
             </IfAuthenticated>
 
             <IfNotAuthenticated className="guest-nav">
-              <Link className="logo" to="/">
-                Home
-              </Link>
-              <Link className="logo" to="/about">
-                About
-              </Link>
-              <Link className="logo" to="/doglist">
-                Doglist
-              </Link>
-              <Link className="signin" to="/" onClick={handleSignIn}>
+              <Link className="logo" to="/" onClick={handleSignIn}>
                 Sign In
               </Link>
-              <Link className="register" to="/" onClick={handleRegister}>
+              <Link className="logo" to="/" onClick={handleRegister}>
                 Register
               </Link>
             </IfNotAuthenticated>
