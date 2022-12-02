@@ -29,8 +29,8 @@ export default function Home() {
             do you need someone to take care of your dog??
           </p>
           <NavLink
-            to="/ownerform"
             className="btn btn-owner"
+            to="/ownerform"
             onClick={!isAuthenticated && handleSignIn}
           >
             Click me!!
