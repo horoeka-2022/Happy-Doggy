@@ -10,9 +10,10 @@ function Profile() {
     getAccessTokenSilently()
       .then(getUser)
       .then((userDetails) => {
+        console.log(userDetails)
         setForm(() => ({
-          color: userDetails?.user_metadata?.color,
-          address: userDetails?.user_metadata?.address,
+          color: userDetails ? userDetails?.user_metadata?.color : '',
+          address: userDetails ? userDetails?.user_metadata?.address : '',
         }))
       })
       .catch((err) => {
@@ -43,7 +44,7 @@ function Profile() {
           />
         </label>
         <label htmlFor="color">
-          What's your favourite color
+          What&apos;s your favourite color
           <input
             type="text"
             name="color"
