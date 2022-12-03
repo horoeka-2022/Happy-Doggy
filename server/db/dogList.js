@@ -14,6 +14,5 @@ function getDogList(db = connection) {
       'description',
       'needs'
     )
-    .orderBy('availibility')
-
+    .orderBy('availibility', 'asc')
 }
