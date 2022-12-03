@@ -1,7 +1,7 @@
 import React from 'react'
 import { postWalkerDetails } from '../apiClient'
 
-function WalkerForm(props) {
+function Walker(props) {
   // const [Experience, setExperince] = useState('')
 
   // useEffect(() => {
@@ -37,32 +37,6 @@ function WalkerForm(props) {
       <p>I love dogs and I </p> <br />
       <form onSubmit={handleSubmit}>
         <section className="flex flex-col gap-4">
-          <div>
-            <input
-              type="radio"
-              id="I love to walk dogs daily"
-              name="experience"
-              value="Daily"
-            />
-            <label htmlFor="I love to walk dogs daily">
-              I love to walk dogs daily
-            </label>
-          </div>
-          <div>
-            <input
-              type="radio"
-              id="2 or 3 times in a week"
-              name="experience"
-              value="2 or 3 times in a week"
-            />
-            <label htmlFor="2 or 3 times in a week">
-              2 or 3 times in a week
-            </label>
-          </div>
-          <div>
-            <input type="radio" id="Newbie" name="experience" value="Newbie" />
-            <label htmlFor="Newbie">I am new to walking Dogs</label>
-          </div>
           <br /> <br />
           <label htmlFor="review"> Why I want to walk this Dog.</label>
           <div>
@@ -82,4 +56,4 @@ function WalkerForm(props) {
   )
 }
 
-export default WalkerForm
+export default Walker
