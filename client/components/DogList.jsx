@@ -26,17 +26,17 @@ function DogList() {
       {doglist.map((item) => {
         return (
           <>
-            <div className="card">
-              <img
-                src={'./server/public/images/' + item.imgID + '.jpg'}
-                alt="doggy"
-              />
-              <div>
-                <h3>{item.dogName}</h3>
-                <p>
-                  &#36;
-                  {item.breed}
-                </p>
+            <div className="card-container">
+              <div className="card card-owner">
+                <img
+                  className="card-img"
+                  src={'./server/public/images/' + item.imgID + '.jpg'}
+                  alt="doggy"
+                />
+                <h3 className="heading heading-tertiary">{item.dogName}</h3>
+                <h3>{item.breed}</h3>
+                <h3>{item.availibility}</h3>
+                <h3>{item.description}</h3>
               </div>
             </div>
           </>
