@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getDogList } from '../apiClient'
-
+import { Link, NavLink } from 'react-router-dom'
 function DogList() {
   const [doglist, setDoglist] = useState([])
   //console.log(doglist)
@@ -37,6 +37,9 @@ function DogList() {
                 <h3>{item.breed}</h3>
                 <h3>{item.availibility}</h3>
                 <h3>{item.description}</h3>
+                <Link to={'/walker/' + item.imgID} className="btn btn-owner">
+                  Take Me For Walk
+                </Link>
               </div>
             </div>
           </>
