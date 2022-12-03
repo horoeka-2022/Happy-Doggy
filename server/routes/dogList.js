@@ -1,12 +1,12 @@
 const express = require('express')
 
-const db = require('../db/owner')
+const db = require('../db/dogList')
 
 const router = express.Router()
 
 module.exports = router
 
-router.post('/', (req, res) => {
+router.get('/', (req, res) => {
   db.getDogList()
     .then((dogList) => {
       res.json(dogList)

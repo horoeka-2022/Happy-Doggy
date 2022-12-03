@@ -1,5 +1,5 @@
 exports.up = (knex) => {
-  return knex.schema.createTable('owner', (table) => {
+  return knex.schema.createTable('dogList', (table) => {
     table.increments('customer_id')
     table.string('customer_name')
     table.string('dog_name')
@@ -11,5 +11,5 @@ exports.up = (knex) => {
 }
 
 exports.down = (knex) => {
-  return knex.schema.dropTable('owner')
+  return knex.schema.dropTable('dogList')
 }
