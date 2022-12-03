@@ -7,7 +7,7 @@ import About from './About'
 import Profile from './Profile'
 import OwnerForm from './OwnerForm'
 import DogList from './DogList'
-import WalkerForm from './WalkerForm'
+import Walker from './Walker'
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/ownerform" element={<OwnerForm />} />
           <Route path="/doglist" element={<DogList />} />
-          <Route path="/walkerform" element={<WalkerForm />} />
+          <Route path="/walker/:id" element={<Walker />} />
         </Routes>
       </main>
     </>
