@@ -27,15 +27,13 @@ function DogList() {
         <ul className="doglist">
           {doglist.map((item) => {
             return (
-              <>
-                <li>
-                  <div className="card card-owner">
-                    <h3 className="heading heading-tertiary">{item.dogName}</h3>
-                    <h3>{item.breed}</h3>
-                    <h3>{item.availibility}</h3>
-                  </div>
-                </li>
-              </>
+              <li key={item.imgID}>
+                <div className="card card-owner">
+                  <h3 className="heading heading-tertiary">{item.dogName}</h3>
+                  <h3>{item.breed}</h3>
+                  <h3>{item.availibility}</h3>
+                </div>
+              </li>
             )
           })}
         </ul>
@@ -65,7 +63,6 @@ function DogList() {
         <div className="doglist"></div>
         <div className="doginfo"></div>
       </div>
-      {console.log(doglist)}
     </>
   )
 }
