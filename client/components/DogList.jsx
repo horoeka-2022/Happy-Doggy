@@ -17,7 +17,7 @@ function DogList() {
 
   return (
     <>
-      <h1>Find you cute walking partner</h1>
+      <h1 className="heading heading-primary">Find you cute walking partner</h1>
       <div className="list-container">
         <div className="doglist"></div>
         <div className="doginfo"></div>
