@@ -1,5 +1,5 @@
 exports.seed = (knex) => {
-  return knex('DogList').insert([
+  return knex('dogList').insert([
     {
       customer_id: 4,
       customer_name: 'Sally McEwan4',
