@@ -1,7 +1,13 @@
 import React from 'react'
 import { postWalkerDetails } from '../apiClient'
+import { useParams } from 'react-router-dom'
 
-function Walker(props) {
+function Walker() {
+  // const location = useLocation()
+  const dogID = useParams()
+  // console.log(location.pathname)
+  console.log(dogID)
+
   // const [Experience, setExperince] = useState('')
 
   // useEffect(() => {
