@@ -1,32 +1,25 @@
 import React from 'react'
 import { postWalkerDetails } from '../apiClient'
-import { useParams } from 'react-router-dom'
+import { useParams, NavLink } from 'react-router-dom'
+import { useAuth0 } from '@auth0/auth0-react'
 
 function Walker() {
-  // const location = useLocation()
   const dogID = useParams()
-  // console.log(location.pathname)
-  console.log(dogID)
+  const { isAuthenticated, loginWithRedirect } = useAuth0()
 
-  // const [Experience, setExperince] = useState('')
+  function handleSignIn(e) {
+    e.preventDefault()
+    loginWithRedirect()
+  }
 
-  // useEffect(() => {
-  //   postWalkerDetails().catch((err) => {
-  //     console.error(err.message)
-  //   })
-  // }, [])
+  //console.log(dogID)
 
   function handleSubmit(event) {
     event.preventDefault()
 
     const experience = event.currentTarget.elements.experience.value
     const walkerReason = event.currentTarget.elements.walkerReason.value
-    // console.log(
-    //   'experience is - ' +
-    //     experience +
-    //     ' ...and walkerReason is - ' +
-    //     walkerReason
-    // )
+
     const submitWalkerObj = {
       experience: experience,
       walkerReason: walkerReason,
@@ -72,7 +65,14 @@ function Walker() {
               </div>
               {/* functixon clickAlert(){' '}
           {alert('Woof Woof! Thank you for choosing me. We will be in touch!')} */}
-              <input
+              <NavLink
+                className="btn btn-owner"
+                to="/bookMe"
+                onClick={!isAuthenticated && handleSignIn}
+              >
+                Walk me!!
+              </NavLink>
+              {/* <input
                 type="button"
                 onClick={() => {
                   alert(
@@ -80,7 +80,7 @@ function Walker() {
                   )
                 }}
                 value="Walk with me!"
-              ></input>
+              ></input> */}
               {/* <button type="submit" className="button">
             Submit
           </button> */}
