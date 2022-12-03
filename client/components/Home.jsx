@@ -16,6 +16,14 @@ export default function Home() {
         How would you like to be happy??
       </h1>
 
+      <p className="about-paragraph">
+        Happy Doggy was created by 4 dog-lovers. We connect dog owners who are
+        time-poor with dog-lovers who want the opportunity to connect to a dog
+        and take them for walks! Dog walkers can see a list of dogs, choose one
+        they love, and submit a request to walk to the dog-owner. The owner can
+        then decide if it`s a compatiple match, and say yes!
+      </p>
+
       <div className="card-container">
         <div className="card card-owner">
           <img
