@@ -3,9 +3,7 @@ import React from 'react'
 export default function About() {
   return (
     <>
-      <div className="about-container">
-        <h1 className="heading">About Happy Doggy</h1>
-      </div>
+      <h1 className="heading heading-primary">About Happy Doggy</h1>
       <div className="about-cards">
         <div className="about-card">
           <h2 className="heading-secondary">Happy Owners!</h2>
