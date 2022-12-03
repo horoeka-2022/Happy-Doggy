@@ -34,22 +34,36 @@ function Walker(props) {
   return (
     <>
       <h1>Tell us more about your Dog walking experience</h1> <br /> <br />
-      <p>I love dogs and I </p> <br />
+      <br />
       <form onSubmit={handleSubmit}>
         <section className="flex flex-col gap-4">
           <br /> <br />
-          <label htmlFor="review"> Why I want to walk this Dog.</label>
+          <label htmlFor="review">
+            {' '}
+            Why I want to walk this Happy Doggy, and my experience with dogs.
+          </label>
           <div>
             <textarea
               rows="4"
               cols="50"
               name="walkerReason" //pls double check this field name from database
-              placeholder="I would love to walk this dog...."
+              placeholder="I would love to walk this dog because...."
             ></textarea>
           </div>
-          <button type="submit" className="button">
+          {/* functixon clickAlert(){' '}
+          {alert('Woof Woof! Thank you for choosing me. We will be in touch!')} */}
+          <input
+            type="button"
+            onClick={() => {
+              alert(
+                'Woof Woof!! Thank you for choosing me. We will be in touch!'
+              )
+            }}
+            value="submit"
+          ></input>
+          {/* <button type="submit" className="button">
             Submit
-          </button>
+          </button> */}
         </section>
       </form>
     </>
