@@ -24,7 +24,7 @@ function DogList() {
           <>
             <div className="card">
               <img
-                src={"./server/public/images/"+item.imgID+".jpg"}
+                src={'./server/public/images/' + item.imgID + '.jpg'}
                 alt="doggy"
               />
               <div>
