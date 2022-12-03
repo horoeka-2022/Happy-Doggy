@@ -19,10 +19,11 @@ router.get('/', checkJwt, (req, res) => {
 
 router.post('/', checkJwt, async (req, res) => {
   const auth0_id = req.user?.sub
-  const { color, address } = req.body
+  const { fullName, phoneNumber, address } = req.body
   const userDetails = {
+    fullName,
+    phoneNumber,
     address,
-    color,
   }
 
   await updateUser(auth0_id, userDetails)

@@ -4,7 +4,11 @@ import { getUser, updateUser } from '../api'
 
 function Profile() {
   const { getAccessTokenSilently } = useAuth0()
-  const [form, setForm] = useState({ color: '', address: '' })
+  const [form, setForm] = useState({
+    fullName: '',
+    phoneNumber: '',
+    address: '',
+  })
 
   useEffect(() => {
     getAccessTokenSilently()
@@ -12,7 +16,10 @@ function Profile() {
       .then((userDetails) => {
         console.log(userDetails)
         setForm(() => ({
-          color: userDetails ? userDetails?.user_metadata?.color : '',
+          fullName: userDetails ? userDetails?.user_metadata?.fullName : '',
+          phoneNumber: userDetails
+            ? userDetails?.user_metadata?.phoneNumber
+            : '',
           address: userDetails ? userDetails?.user_metadata?.address : '',
         }))
       })
@@ -33,36 +40,49 @@ function Profile() {
 
   return (
     <>
-      <form className="flex flex-col justify-start gap-1">
-        <label htmlFor="address">
-          Address
-          <input
-            type="text"
-            name="address"
-            value={form.address}
-            onChange={handleChange}
-          />
-        </label>
-        <label htmlFor="color">
-          What&apos;s your favourite color
-          <input
-            type="text"
-            name="color"
-            value={form.color}
-            onChange={handleChange}
-            className="mx-4 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-      focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
-      disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
-      invalid:border-pink-500 invalid:text-pink-600
-      focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-          />
-        </label>
-        <button
-          onClick={handleSubmit}
-          className="rounded-2xl bg-blue-800 hover:bg-blue-600 text-white p-2 px-4 w-fit"
-        >
-          Update
-        </button>
+      <form className="profile-form">
+        <h2 className="heading heading-secondary">
+          Please provide us your details
+        </h2>
+        <div className="form-container">
+          <div className="input-box">
+            <label htmlFor="fullName">Full Name</label>
+            <input
+              type="text"
+              name="fullName"
+              className="input-box__input"
+              value={form.fullName}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="input-box">
+            <label htmlFor="address">Address</label>
+            <input
+              type="text"
+              name="address"
+              className="input-box__input"
+              value={form.address}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="input-box">
+            <label htmlFor="phoneNumber">Phone Number</label>
+            <input
+              type="text"
+              name="phoneNumber"
+              className="input-box__input"
+              value={form.phoneNumber}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <button onClick={handleSubmit} className="btn btn-form">
+            Update
+          </button>
+        </div>
       </form>
     </>
   )

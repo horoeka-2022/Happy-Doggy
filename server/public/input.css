@@ -63,6 +63,7 @@ body {
 }
 
 .heading-primary {
+  text-align: center;
   margin-top: 3rem;
   font-size: 3.5rem;
 }
@@ -102,7 +103,7 @@ body {
   margin-top: 1rem;
 }
 
-a.btn {
+a.btn, .btn {
   display: block;
   margin: 4rem auto 0;
   padding: 2rem 2rem;
@@ -112,6 +113,8 @@ a.btn {
   font-size: 2.2rem;
   color: #000;
   text-decoration: none;
+  border: none;
+  cursor: pointer;
 }
 
 /* About Page */
@@ -156,4 +159,31 @@ a.btn {
 
 .paragraph {
   font-size: 2.2rem;
+}
+
+/* Profile Form */
+.profile-form {
+  width: 50%;
+  margin: 5rem auto 0;
+  background-color: #ffbd5970;
+  padding: 7rem 10rem;
+  font-size: 2.5rem;
+}
+
+.form-container {
+  margin-top: 4rem;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box__input {
+  display: block;
+  padding: 2rem 0 2rem 1.2rem;
+  width: 50%;
+  height: 4rem;
+  margin: 0.5rem 0 1.5rem;
+  font-size: 2.5rem;
 }
