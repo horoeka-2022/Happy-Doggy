@@ -5,7 +5,7 @@ exports.up = (knex) => {
     table.string('dog_name')
     table.string('breed')
     table.string('needs')
-    table.string('availibility')
+    table.date('availibility')
     table.string('description')
   })
 }

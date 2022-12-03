@@ -3,9 +3,14 @@ import { getDogList } from '../apiClient'
 import { Link } from 'react-router-dom'
 function DogList() {
   const [doglist, setDoglist] = useState([])
-  //console.log(doglist)
+
+  const sortedAsc = doglist.sort(
+    (objA, objB) => Number(objA.availibility) - Number(objB.date)
+  )
+  console.log(sortedAsc)
 
   useEffect(() => {
+    console.log(doglist)
     getDogList()
       .then((result) => {
         setDoglist(() => result)
@@ -17,15 +22,23 @@ function DogList() {
 
   return (
     <>
-      <h1 className="heading heading-primary">
-        Find your cute walking partner
-      </h1>
-      <div className="list-container">
-        <div className="doglist"></div>
-        <div className="doginfo"></div>
-      </div>
-      {console.log(doglist)}
-      {doglist.map((item) => {
+      <h1 className="heading heading-primary">Find you cute walking partner</h1>
+      <div className="doglist-container">
+        <ul className="doglist">
+          {doglist.map((item) => {
+            return (
+              <li key={item.imgID}>
+                <div className="card card-owner">
+                  <h3 className="heading heading-tertiary">{item.dogName}</h3>
+                  <h3>{item.breed}</h3>
+                  <h3>{item.availibility}</h3>
+                </div>
+              </li>
+            )
+          })}
+        </ul>
+        <div className="doginfo">
+         {doglist.map((item) => {
         return (
           <>
             <div className="card-container">
@@ -47,6 +60,8 @@ function DogList() {
           </>
         )
       })}
+        </div>
+      </div>
     </>
   )
 }

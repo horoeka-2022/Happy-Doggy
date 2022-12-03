@@ -64,7 +64,7 @@ body {
 
 .heading-primary {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2.5rem;
   font-size: 3.5rem;
 }
 
@@ -186,4 +186,22 @@ a.btn, .btn {
   height: 4rem;
   margin: 0.5rem 0 1.5rem;
   font-size: 2.5rem;
+}
+
+/* Dog List */
+.doglist-container {
+  display: flex;
+  background-color: #ffbd5980;
+  height: 70vh;
+}
+
+.doglist {
+  flex: 1 1 30%;
+  background-color: rgb(250, 215, 255);
+  overflow-y:scroll;
+}
+
+.doginfo {
+  flex: 1 1 70%;
+  overflow-y:scroll;
 }
