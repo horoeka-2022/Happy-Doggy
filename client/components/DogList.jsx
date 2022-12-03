@@ -18,13 +18,17 @@ function DogList() {
   return (
     <>
       <h1>Find you cute walking partner</h1>
+      <div className="list-container">
+        <div className="doglist"></div>
+        <div className="doginfo"></div>
+      </div>
       {console.log(doglist)}
       {doglist.map((item) => {
         return (
           <>
             <div className="card">
               <img
-                src={"./server/public/images/"+item.imgID+".jpg"}
+                src={'./server/public/images/' + item.imgID + '.jpg'}
                 alt="doggy"
               />
               <div>
@@ -38,6 +42,11 @@ function DogList() {
           </>
         )
       })}
+
+      <img
+        src="https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg"
+        alt="doggy"
+      />
     </>
   )
 }
