@@ -1,7 +1,7 @@
 import React from 'react'
 import { postWalkerDetails } from '../apiClient'
 
-function WalkerForm(props) {
+function Walker(props) {
   // const [Experience, setExperince] = useState('')
 
   // useEffect(() => {
@@ -56,4 +56,4 @@ function WalkerForm(props) {
   )
 }
 
-export default WalkerForm
+export default Walker
