@@ -47,6 +47,8 @@ function DogList() {
               >
                 <p className="item-name">Name: {item.dogName}</p>
                 <p className="item-breed">Breed: {item.breed}</p>
+                <p className="item-location">Location: {item.suburb}</p>
+
                 <p className="item-date">Available Date: {item.availibility}</p>
               </li>
             )
@@ -67,6 +69,8 @@ function DogList() {
                   Name: {doglist[0].dogName}
                 </p>
                 <p>Breed: {doglist[0].breed}</p>
+                <p>Location: {doglist[0].suburb}</p>
+
                 <p>Available Date: {doglist[0].availibility}</p>
                 <p className="dog-description">
                   Introduction: {doglist[0].description}
@@ -97,6 +101,8 @@ function DogList() {
                 Name: {doginfo.dogName}
               </p>
               <p>Breed: {doginfo.breed}</p>
+              <p>Location: {doginfo.suburb}</p>
+
               <p>Available Date: {doginfo.availibility}</p>
               <p className="dog-description">
                 Introduction: {doginfo.description}
