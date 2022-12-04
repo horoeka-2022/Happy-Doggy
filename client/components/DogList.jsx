@@ -5,7 +5,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
 function DogList() {
-  const { logout, loginWithRedirect, user, isLoading } = useAuth0()
+  const { loginWithRedirect } = useAuth0()
   const [doglist, setDoglist] = useState([])
   const [doginfo, setDogInfo] = useState([])
 
