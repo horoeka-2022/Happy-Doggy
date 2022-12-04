@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { getDogList } from '../apiClient'
 import { Link } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
+import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
+
 
 function DogList() {
   const { loginWithRedirect } = useAuth0()
@@ -29,6 +31,11 @@ function DogList() {
     console.log(doglist)
   }
 
+  function handleSignIn(e) {
+    e.preventDefault()
+    loginWithRedirect()
+  }
+
   return (
     <>
       <h1 className="heading heading-primary">
@@ -52,7 +59,7 @@ function DogList() {
         </ul>
         <div className="doginfo">
           {doglist.length < 1 ? (
-            <p>loading</p>
+            <p className="loading">loading</p>
           ) : doginfo.length < 1 ? (
             <>
               <div className="info-container">
@@ -69,12 +76,19 @@ function DogList() {
                 <p className="dog-description">
                   Introduction: {doglist[0].description}
                 </p>
-                <Link
-                  to={'/walker/' + doglist[0].imgID}
-                  className="btn btn-book"
-                >
-                  Take Me For A Walk !!
-                </Link>
+                <IfAuthenticated>
+                  <Link
+                    to={'/walker/' + doglist[0].imgID}
+                    className="btn btn-book"
+                  >
+                    Take Me For A Walk !!
+                  </Link>
+                </IfAuthenticated>
+                <IfNotAuthenticated>
+                  <Link onClick={handleSignIn} className="btn btn-book">
+                    Take Me For A Walk !!
+                  </Link>
+                </IfNotAuthenticated>
               </div>
             </>
           ) : (
@@ -92,13 +106,19 @@ function DogList() {
               <p className="dog-description">
                 Introduction: {doginfo.description}
               </p>
-              <Link
-                onClick={handleSignIn}
-                to={'/walker/' + doginfo.imgID}
-                className="btn btn-book"
-              >
-                Take Me For A Walk !!
-              </Link>
+              <IfAuthenticated>
+                <Link
+                  to={'/walker/' + doglist[0].imgID}
+                  className="btn btn-book"
+                >
+                  Take Me For A Walk !!
+                </Link>
+              </IfAuthenticated>
+              <IfNotAuthenticated>
+                <Link onClick={handleSignIn} className="btn btn-book">
+                  Take Me For A Walk !!
+                </Link>
+              </IfNotAuthenticated>
             </div>
           )}
         </div>
