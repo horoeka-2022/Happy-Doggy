@@ -5,7 +5,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 export default function Home() {
   const { isAuthenticated, loginWithRedirect, user } = useAuth0()
   let welcomeMsg = ''
-  if (isAuthenticated) {
+  if (isAuthenticated && user.given_name) {
     welcomeMsg =
       'Welcome ' + user.given_name + '!! How would you like to be happy?'
   } else {
