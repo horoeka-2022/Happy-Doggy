@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { getDogList } from '../apiClient'
 import { Link } from 'react-router-dom'
+import { useAuth0 } from '@auth0/auth0-react'
 
 function DogList() {
+  const { loginWithRedirect } = useAuth0()
   const [doglist, setDoglist] = useState([])
   const [doginfo, setDogInfo] = useState([])
+
+  function handleSignIn() {
+    loginWithRedirect({ redirectUri: `${window.location.origin}/doglist` })
+  }
 
   useEffect(() => {
     console.log(doglist)
@@ -45,7 +51,6 @@ function DogList() {
           })}
         </ul>
         <div className="doginfo">
-
           {doglist.length < 1 ? (
             <p>loading</p>
           ) : doginfo.length < 1 ? (
@@ -87,12 +92,15 @@ function DogList() {
               <p className="dog-description">
                 Introduction: {doginfo.description}
               </p>
-              <Link to={'/walker/' + doginfo.imgID} className="btn btn-book">
+              <Link
+                onClick={handleSignIn}
+                to={'/walker/' + doginfo.imgID}
+                className="btn btn-book"
+              >
                 Take Me For A Walk !!
               </Link>
             </div>
           )}
-
         </div>
       </div>
     </>
