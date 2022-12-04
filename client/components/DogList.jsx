@@ -47,7 +47,7 @@ function DogList() {
         <div className="doginfo">
 
           {doglist.length < 1 ? (
-            <p>loading</p>
+            <p className='loading'>loading</p>
           ) : doginfo.length < 1 ? (
             <>
               <div className="info-container">

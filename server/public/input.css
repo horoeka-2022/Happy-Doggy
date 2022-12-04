@@ -260,3 +260,7 @@ a.btn-book:hover {
   width: 50%;
   margin: 0 auto;
 }
+
+.loading {
+  font-size: 5rem;
+}
