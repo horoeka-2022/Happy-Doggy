@@ -3,19 +3,22 @@ import { Link, NavLink } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
 
 export default function Home() {
-  const { isAuthenticated, loginWithRedirect } = useAuth0()
+  const { isAuthenticated, loginWithRedirect, user } = useAuth0()
+  let welcomeMsg = ''
+  if (isAuthenticated) {
+    welcomeMsg =
+      'Welcome ' + user.given_name + '!! How would you like to be happy?'
+  } else {
+    welcomeMsg = 'Welcome!! How would you like to be happy?'
+  }
 
   function handleSignIn(e) {
     e.preventDefault()
     loginWithRedirect()
   }
-
   return (
     <>
-      <h1 className="heading heading-primary">
-        How would you like to be happy??
-      </h1>
-
+      <h1 className="heading heading-primary">{welcomeMsg}</h1>
       <p className="about-paragraph">
         Happy Doggy was created by 4 dog-lovers. We connect dog owners who are
         time-poor with dog-lovers who want the opportunity to connect to a dog
@@ -23,7 +26,6 @@ export default function Home() {
         they love, and submit a request to walk to the dog-owner. The owner can
         then decide if it`s a compatible match, and say yes!
       </p>
-
       <div className="card-container">
         <div className="card card-owner">
           <img
