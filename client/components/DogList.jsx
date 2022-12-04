@@ -58,7 +58,9 @@ function DogList() {
                 </p>
                 <p>Breed: {doglist[0].breed}</p>
                 <p>Available Date: {doglist[0].availibility}</p>
-                <p>Introduction: {doglist[0].description}</p>
+                <p className="dog-description">
+                  Introduction: {doglist[0].description}
+                </p>
                 <Link
                   to={'/walker/' + doglist[0].imgID}
                   className="btn btn-book"
@@ -79,7 +81,9 @@ function DogList() {
               </p>
               <p>Breed: {doginfo.breed}</p>
               <p>Available Date: {doginfo.availibility}</p>
-              <p>Introduction: {doginfo.description}</p>
+              <p className="dog-description">
+                Introduction: {doginfo.description}
+              </p>
               <Link to={'/walker/' + doginfo.imgID} className="btn btn-book">
                 Take Me For A Walk !!
               </Link>

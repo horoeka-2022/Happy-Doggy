@@ -253,5 +253,10 @@ a.btn-book:hover {
 }
 
 .dog-img {
-  max-width: 30rem;
+  max-height: 30rem;
+}
+
+.dog-description {
+  width: 50%;
+  margin: 0 auto;
 }
