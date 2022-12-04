@@ -2,17 +2,27 @@ const connection = require('./connection')
 
 module.exports = {
   getDogList,
+  addWalkerRequest,
 }
 
 function getDogList(db = connection) {
   return db('dogList')
     .select(
-      'customer_id as imgID',
+      'id as imgID',
       'availibility',
       'dog_name as dogName',
       'breed',
       'description',
-      'needs'
+      'needs',
+      'owner_id as ownerId',
+      'walker_id as walkerId'
     )
     .orderBy('availibility', 'asc')
+}
+
+function addWalkerRequest(description, auth0Id, db = connection) {
+  return db('walker').insert({
+    description,
+    auth0_id: auth0Id,
+  })
 }
