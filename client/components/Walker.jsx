@@ -5,7 +5,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 
 function Walker() {
   const dogID = useParams()
-  const { isAuthenticated, loginWithRedirect } = useAuth0()
+  const { isAuthenticated, loginWithRedirect, user } = useAuth0()
 
   function handleSignIn(e) {
     e.preventDefault()
@@ -67,7 +67,7 @@ function Walker() {
           {alert('Woof Woof! Thank you for choosing me. We will be in touch!')} */}
               <NavLink
                 className="btn btn-owner"
-                to="/bookMe"
+                to="/bookingConfirmation"
                 onClick={!isAuthenticated && handleSignIn}
               >
                 Walk me!!

@@ -36,6 +36,7 @@ function Nav() {
               />
             </Link>
           </div>
+
           <div className="links">
             <Link className="logo" to="/">
               Home

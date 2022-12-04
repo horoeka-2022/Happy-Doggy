@@ -35,7 +35,8 @@ function Profile() {
   async function handleSubmit(e) {
     e.preventDefault()
     const token = await getAccessTokenSilently()
-    await updateUser(form, token)
+    let updateRes = await updateUser(form, token)
+    console.log(updateRes)
   }
 
   return (
