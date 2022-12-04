@@ -52,7 +52,12 @@ body {
   background-color: aliceblue;
   border-radius: 4rem;
   padding: 1.2rem;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
 
+.links a:hover {
+  background-color: rgba(250, 215, 255, 0.7);
 }
 
 /* Home Page */
@@ -193,6 +198,8 @@ a.btn, .btn {
   display: flex;
   background-color: #ffbd5980;
   height: 70vh;
+  margin-top: 3rem;
+  border-radius: 3rem;
 }
 
 .doglist {
@@ -202,11 +209,12 @@ a.btn, .btn {
   gap: 2rem;
   background-color: rgba(250, 215, 255, 0.7);
   overflow-y:scroll;
+  border-radius: 3rem;
 }
 
 .doglist-item {
   font-size: 2rem;
-  padding: 1rem;
+  padding: 2rem;
   background-color: #ffbd5970;
   transition: 0.2s linear;
   cursor: pointer;
@@ -222,5 +230,28 @@ a.btn, .btn {
 
 .doginfo {
   flex: 1 1 70%;
-  overflow-y:scroll;
+  max-height: 10rem;
+}
+
+.info-container {
+  padding: 5rem;
+  text-align: center;
+}
+
+.info-container p {
+  font-size: 2rem;
+}
+
+a.btn-book {
+  font-size: 2.5rem;
+  width: 50%;
+  transition: 0.2s linear;
+}
+
+a.btn-book:hover {
+  background-color: rgba(250, 215, 255, 0.7);
+}
+
+.dog-img {
+  max-width: 30rem;
 }

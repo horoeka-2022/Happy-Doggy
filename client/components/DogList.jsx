@@ -17,8 +17,10 @@ function DogList() {
       })
   }, [])
 
-  function handleClick(id) {
-    console.log(id)
+  async function handleClick(id) {
+    const selectedDog = await doglist.find((el) => el.imgID === id)
+    setDogInfo(selectedDog)
+    console.log(doglist)
   }
 
   return (
@@ -41,32 +43,48 @@ function DogList() {
           })}
         </ul>
         <div className="doginfo">
-          {/* {doginfo === [] && <p>no data<p/>} */}
-          {doglist.map((item) => {
-            return (
-              <>
-                <div className="card-container">
-                  <div className="card card-owner">
-                    <img
-                      className="card-img"
-                      src={'./server/public/images/' + item.imgID + '.jpg'}
-                      alt="doggy"
-                    />
-                    <h3 className="heading heading-tertiary">{item.dogName}</h3>
-                    <h3>{item.breed}</h3>
-                    <h3>{item.availibility}</h3>
-                    <h3>{item.description}</h3>
-                    <Link
-                      to={'/walker/' + item.imgID}
-                      className="btn btn-owner"
-                    >
-                      Take Me For A Walk
-                    </Link>
-                  </div>
-                </div>
-              </>
-            )
-          })}
+          {doglist.length < 1 ? (
+            <p>loading</p>
+          ) : doginfo.length < 1 ? (
+            <>
+              <div className="info-container">
+                <img
+                  className="dog-img"
+                  src={'./server/public/images/' + doglist[0].imgID + '.jpg'}
+                  alt="doggy"
+                />
+                <p className="heading heading-tertiary">
+                  Name: {doglist[0].dogName}
+                </p>
+                <p>Breed: {doglist[0].breed}</p>
+                <p>Available Date: {doglist[0].availibility}</p>
+                <p>Introduction: {doglist[0].description}</p>
+                <Link
+                  to={'/walker/' + doglist[0].imgID}
+                  className="btn btn-book"
+                >
+                  Take Me For A Walk !!
+                </Link>
+              </div>
+            </>
+          ) : (
+            <div className="info-container">
+              <img
+                className="dog-img"
+                src={'./server/public/images/' + doginfo.imgID + '.jpg'}
+                alt="doggy"
+              />
+              <p className="heading heading-tertiary">
+                Name: {doginfo.dogName}
+              </p>
+              <p>Breed: {doginfo.breed}</p>
+              <p>Available Date: {doginfo.availibility}</p>
+              <p>Introduction: {doginfo.description}</p>
+              <Link to={'/walker/' + doginfo.imgID} className="btn btn-book">
+                Take Me For A Walk !!
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </>
