@@ -4,11 +4,7 @@ import { Link } from 'react-router-dom'
 
 function DogList() {
   const [doglist, setDoglist] = useState([])
-
-  const sortedAsc = doglist.sort(
-    (objA, objB) => Number(objA.availibility) - Number(objB.date)
-  )
-  console.log(sortedAsc)
+  const [doginfo, setDogInfo] = useState([])
 
   useEffect(() => {
     console.log(doglist)
@@ -21,6 +17,12 @@ function DogList() {
       })
   }, [])
 
+  async function handleClick(id) {
+    const selectedDog = await doglist.find((el) => el.imgID === id)
+    setDogInfo(selectedDog)
+    console.log(doglist)
+  }
+
   return (
     <>
       <h1 className="heading heading-primary">
@@ -30,42 +32,67 @@ function DogList() {
         <ul className="doglist">
           {doglist.map((item) => {
             return (
-              <li key={item.imgID}>
-                <div className="card card-owner">
-                  <h3 className="heading heading-tertiary">{item.dogName}</h3>
-                  <h3>{item.breed}</h3>
-                  <h3>{item.availibility}</h3>
-                </div>
+              <li
+                className="doglist-item"
+                key={item.imgID}
+                onClick={() => handleClick(item.imgID)}
+              >
+                <p className="item-name">Name: {item.dogName}</p>
+                <p className="item-breed">Breed: {item.breed}</p>
+                <p className="item-date">Available Date: {item.availibility}</p>
               </li>
             )
           })}
         </ul>
         <div className="doginfo">
-          {doglist.map((item) => {
-            return (
-              <>
-                <div className="card-container">
-                  <div className="card card-owner">
-                    <img
-                      className="card-img"
-                      src={'./server/public/images/' + item.imgID + '.jpg'}
-                      alt="doggy"
-                    />
-                    <h3 className="heading heading-tertiary">{item.dogName}</h3>
-                    <h3>{item.breed}</h3>
-                    <h3>{item.availibility}</h3>
-                    <h3>{item.description}</h3>
-                    <Link
-                      to={'/walker/' + item.imgID}
-                      className="btn btn-owner"
-                    >
-                      Take Me For A Walk
-                    </Link>
-                  </div>
-                </div>
-              </>
-            )
-          })}
+
+          {doglist.length < 1 ? (
+            <p>loading</p>
+          ) : doginfo.length < 1 ? (
+            <>
+              <div className="info-container">
+                <img
+                  className="dog-img"
+                  src={'./server/public/images/' + doglist[0].imgID + '.jpg'}
+                  alt="doggy"
+                />
+                <p className="heading heading-tertiary">
+                  Name: {doglist[0].dogName}
+                </p>
+                <p>Breed: {doglist[0].breed}</p>
+                <p>Available Date: {doglist[0].availibility}</p>
+                <p className="dog-description">
+                  Introduction: {doglist[0].description}
+                </p>
+                <Link
+                  to={'/walker/' + doglist[0].imgID}
+                  className="btn btn-book"
+                >
+                  Take Me For A Walk !!
+                </Link>
+              </div>
+            </>
+          ) : (
+            <div className="info-container">
+              <img
+                className="dog-img"
+                src={'./server/public/images/' + doginfo.imgID + '.jpg'}
+                alt="doggy"
+              />
+              <p className="heading heading-tertiary">
+                Name: {doginfo.dogName}
+              </p>
+              <p>Breed: {doginfo.breed}</p>
+              <p>Available Date: {doginfo.availibility}</p>
+              <p className="dog-description">
+                Introduction: {doginfo.description}
+              </p>
+              <Link to={'/walker/' + doginfo.imgID} className="btn btn-book">
+                Take Me For A Walk !!
+              </Link>
+            </div>
+          )}
+
         </div>
       </div>
     </>
