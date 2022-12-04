@@ -238,6 +238,7 @@ a.btn, .btn {
   padding: 5rem;
   height: 70vh;
   text-align: center;
+  overflow-y:scroll;
 }
 
 .info-container p {
