@@ -7,12 +7,14 @@ module.exports = {
 function getDogList(db = connection) {
   return db('dogList')
     .select(
-      'customer_id as imgID',
+      'id as imgID',
       'availibility',
       'dog_name as dogName',
       'breed',
       'description',
-      'needs'
+      'needs',
+      'owner_id as ownerId',
+      'walker_id as walkerId'
     )
     .orderBy('availibility', 'asc')
 }
