@@ -40,7 +40,7 @@ body {
 }
 
 .nav-logo {
-  width: 12rem;
+  height: 15vh;
 }
 
 .links {
@@ -236,7 +236,9 @@ a.btn, .btn {
 
 .info-container {
   padding: 5rem;
+  height: 70vh;
   text-align: center;
+  overflow-y:scroll;
 }
 
 .info-container p {
