@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getDogList } from '../apiClient'
 import { Link } from 'react-router-dom'
+
 function DogList() {
   const [doglist, setDoglist] = useState([])
 
@@ -22,7 +23,9 @@ function DogList() {
 
   return (
     <>
-      <h1 className="heading heading-primary">Find you cute walking partner</h1>
+      <h1 className="heading heading-primary">
+        Find your cute walking partner
+      </h1>
       <div className="doglist-container">
         <ul className="doglist">
           {doglist.map((item) => {
@@ -38,28 +41,31 @@ function DogList() {
           })}
         </ul>
         <div className="doginfo">
-         {doglist.map((item) => {
-        return (
-          <>
-            <div className="card-container">
-              <div className="card card-owner">
-                <img
-                  className="card-img"
-                  src={'./server/public/images/' + item.imgID + '.jpg'}
-                  alt="doggy"
-                />
-                <h3 className="heading heading-tertiary">{item.dogName}</h3>
-                <h3>{item.breed}</h3>
-                <h3>{item.availibility}</h3>
-                <h3>{item.description}</h3>
-                <Link to={'/walker/' + item.imgID} className="btn btn-owner">
-                  Take Me For A Walk
-                </Link>
-              </div>
-            </div>
-          </>
-        )
-      })}
+          {doglist.map((item) => {
+            return (
+              <>
+                <div className="card-container">
+                  <div className="card card-owner">
+                    <img
+                      className="card-img"
+                      src={'./server/public/images/' + item.imgID + '.jpg'}
+                      alt="doggy"
+                    />
+                    <h3 className="heading heading-tertiary">{item.dogName}</h3>
+                    <h3>{item.breed}</h3>
+                    <h3>{item.availibility}</h3>
+                    <h3>{item.description}</h3>
+                    <Link
+                      to={'/walker/' + item.imgID}
+                      className="btn btn-owner"
+                    >
+                      Take Me For A Walk
+                    </Link>
+                  </div>
+                </div>
+              </>
+            )
+          })}
         </div>
       </div>
     </>
