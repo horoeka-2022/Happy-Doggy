@@ -14,3 +14,8 @@ export async function getDogList() {
   // return request.get('/api/v1/dogList/').then((response) => response.body)
   return dl
 }
+
+
+//get route for booking
+
+//post route for booking

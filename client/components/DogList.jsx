@@ -25,7 +25,9 @@ function DogList() {
 
   return (
     <>
-      <h1 className="heading heading-primary">Find you cute walking partner</h1>
+      <h1 className="heading heading-primary">
+        Find your cute walking partner
+      </h1>
       <div className="doglist-container">
         <ul className="doglist">
           {doglist.map((item) => {
@@ -43,6 +45,7 @@ function DogList() {
           })}
         </ul>
         <div className="doginfo">
+
           {doglist.length < 1 ? (
             <p>loading</p>
           ) : doginfo.length < 1 ? (
@@ -89,6 +92,7 @@ function DogList() {
               </Link>
             </div>
           )}
+
         </div>
       </div>
     </>

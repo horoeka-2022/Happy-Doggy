@@ -8,6 +8,7 @@ import Profile from './Profile'
 import OwnerForm from './OwnerForm'
 import DogList from './DogList'
 import Walker from './Walker'
+import BookingConfirmation from './BookingConfirmation'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/ownerform" element={<OwnerForm />} />
           <Route path="/doglist" element={<DogList />} />
           <Route path="/walker/:id" element={<Walker />} />
+          <Route path="/bookingConfirmation" element={<BookingConfirmation />} />
         </Routes>
       </main>
     </>
