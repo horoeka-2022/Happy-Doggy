@@ -197,8 +197,27 @@ a.btn, .btn {
 
 .doglist {
   flex: 1 1 30%;
-  background-color: rgb(250, 215, 255);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: rgba(250, 215, 255, 0.7);
   overflow-y:scroll;
+}
+
+.doglist-item {
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: #ffbd5970;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+
+.doglist-item:hover {
+  background-color: rgba(250, 215, 255, 0.7);
+}
+
+.doglist-item p:not(:first-child) {
+  margin-top: 1rem;
 }
 
 .doginfo {
