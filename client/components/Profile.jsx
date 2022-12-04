@@ -12,9 +12,6 @@ function Profile() {
 
   useEffect(() => {
     getAccessTokenSilently()
-      .then((token) => {
-        console.log(token)
-      })
       .then(getUser)
       .then((userDetails) => {
         console.log(userDetails)
