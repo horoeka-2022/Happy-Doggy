@@ -4,10 +4,15 @@ import { Link } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
 import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
+
 function DogList() {
   const { loginWithRedirect } = useAuth0()
   const [doglist, setDoglist] = useState([])
   const [doginfo, setDogInfo] = useState([])
+
+  function handleSignIn() {
+    loginWithRedirect({ redirectUri: `${window.location.origin}/doglist` })
+  }
 
   useEffect(() => {
     console.log(doglist)
