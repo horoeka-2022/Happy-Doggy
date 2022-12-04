@@ -5,7 +5,15 @@ function BookingConfirmation() {
   return (
     <>
       <NavLink />
-      <h2>Your Booking is Confirmed</h2>
+      <section className="nav-container">
+        <nav className="nav">
+          <div className="rounded-full ...">
+            <h2 className="heading heading-primary">
+              Your Booking is Confirmed
+            </h2>
+          </div>
+        </nav>
+      </section>
     </>
   )
 }
