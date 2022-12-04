@@ -8,6 +8,7 @@ exports.up = (knex) => {
     table.string('description')
     table.string('owner_id')
     table.string('walker_id')
+    table.string('suburb')
   })
 }
 
