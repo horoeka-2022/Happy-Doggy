@@ -52,7 +52,7 @@ function Nav() {
               <Link to="/" onClick={handleLogoff}>
                 Log off
               </Link>
-              {/* <p>{!isLoading && <span>{user?.email}</span>}</p> */}
+             
             </IfAuthenticated>
 
             <IfNotAuthenticated className="guest-nav">
