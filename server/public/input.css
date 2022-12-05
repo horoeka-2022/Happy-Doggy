@@ -170,9 +170,9 @@ a.btn, .btn {
 /* Profile Form */
 .profile-form {
   width: 50%;
-  margin: 5rem auto 0;
+  margin: 5rem auto;
   background-color: #ffbd5970;
-  padding: 7rem 10rem;
+  padding: 5rem 10rem;
   font-size: 2.5rem;
 }
 

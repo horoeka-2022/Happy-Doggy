@@ -27,3 +27,9 @@ function addWalkerRequest(description, auth0Id, db = connection) {
     auth0_id: auth0Id,
   })
 }
+
+// function addOwnerRequest(description, auth0Id, db = connection) {
+//   return db('dogList').insert({
+
+//   })
+// }
