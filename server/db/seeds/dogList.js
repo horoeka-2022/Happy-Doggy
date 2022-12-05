@@ -24,7 +24,7 @@ exports.seed = async (knex) => {
         id: 5,
 
         dog_name: 'Lilly',
-        breed: 'Cutie',
+        breed: 'Bulldog',
         needs: 'History of chasing cats and birds',
         availibility: '10/12/22',
         description:
@@ -32,7 +32,7 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'Waiheke, Auckland',
         walker_id: 'auth0|638ac80284d437614af49277',
-        url: 'https://st.depositphotos.com/2869437/3739/i/450/depositphotos_37392643-stock-photo-close-up-of-pug.jpg',
+        url: 'https://www.thesprucepets.com/thmb/R03Eb1Y0Lcmwhr-4bpgy_hagZCQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/1_American_Bulldog-5b339bcf4cedfd003712e3b5.jpg',
       },
 
       {
@@ -48,13 +48,13 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'Glen Eden, Auckland',
         walker_id: 'auth0|638ac80284d437614af49277',
-        url: 'https://st.depositphotos.com/2869437/3739/i/450/depositphotos_37392643-stock-photo-close-up-of-pug.jpg',
+        url: 'https://media-be.chewy.com/wp-content/uploads/2021/05/05180433/Cocker-Spaniel_FeaturedImage-1024x615.jpg',
       },
       {
         id: 7,
 
         dog_name: 'Tango',
-        breed: 'Mixed',
+        breed: 'Greyhound',
         needs: 'Soft voices, reassurance and rewards(esp food!!)',
         availibility: '12/12/22',
         description:
@@ -62,7 +62,7 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'Devonport, Auckland',
         walker_id: 'auth0|638ac80284d437614af49277',
-        url: 'https://st.depositphotos.com/2869437/3739/i/450/depositphotos_37392643-stock-photo-close-up-of-pug.jpg',
+        url: 'https://cdn-fastly.petguide.com/media/2022/02/28/8264126/greyhound.jpg?size=720x845&nocrop=1',
       },
       {
         id: 8,
@@ -76,14 +76,14 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'Pakuranga, Auckland',
         walker_id: 'auth0|638ac80284d437614af49277',
-        url: 'https://st.depositphotos.com/2869437/3739/i/450/depositphotos_37392643-stock-photo-close-up-of-pug.jpg',
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_yF3EzvhHOSFVWBom1647xJWsOtmFkj27vg&usqp=CAU',
       },
 
       {
         id: 9,
 
         dog_name: 'Tank',
-        breed: 'Tiny nugget part doberman ',
+        breed: 'Doberman ',
         needs: 'Constant attention and cuddles',
         availibility: '18/12/22',
         description:
@@ -91,13 +91,13 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'CBD, Auckland',
         walker_id: 'auth0|638ac80284d437614af49277',
-        url: 'https://st.depositphotos.com/2869437/3739/i/450/depositphotos_37392643-stock-photo-close-up-of-pug.jpg',
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrIJlU3-leKRng6MC0O45wS2GoxwpQQ69VOA&usqp=CAU',
       },
       {
         id: 10,
 
         dog_name: 'Accorn',
-        breed: 'Mixed',
+        breed: 'Daschund',
         needs: 'Gentle music to put them to sleep',
         availibility: '15/12/22',
         description:
@@ -105,7 +105,7 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'Grey Lynn, Auckland',
         walker_id: 'auth0|638ac80284d437614af49277',
-        url: 'https://st.depositphotos.com/2869437/3739/i/450/depositphotos_37392643-stock-photo-close-up-of-pug.jpg',
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIXwY8KsuopM9V5s90xbD3FNwkpEbGb_uRQ&usqp=CAU',
       },
       {
         id: 11,
@@ -119,14 +119,14 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'Mangere, Auckland',
         walker_id: 'auth0|638ac80284d437614af49277',
-        url: 'https://st.depositphotos.com/2869437/3739/i/450/depositphotos_37392643-stock-photo-close-up-of-pug.jpg',
+        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjXy1kMYtYaI0Y-fENDBotVaJqcrxuZ46f6w&usqp=CAU',
       },
 
       {
         id: 12,
 
         dog_name: 'Cheesecake',
-        breed: 'Cocker spaniel collie cross',
+        breed: 'Boarder Collie',
         needs:
           'Def needs constant leesh as she likes to wander up to strangers!',
         availibility: '26/12/22',
@@ -135,7 +135,7 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'Howick, Auckland',
         walker_id: 'auth0|638ac80284d437614af49277',
-        url: 'https://st.depositphotos.com/2869437/3739/i/450/depositphotos_37392643-stock-photo-close-up-of-pug.jpg',
+        url: 'https://cf.ltkcdn.net/dogs/dog-breeds/images/std/323839-800x533-border-collie-breed.jpg',
       },
     ])
 }
