@@ -5,7 +5,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 
 function Walker() {
   const dogID = useParams()
- 
+
   const { isAuthenticated, loginWithRedirect, user } = useAuth0()
 
   function handleSignIn(e) {
@@ -24,7 +24,6 @@ function Walker() {
       walkerReason: walkerReason,
     }
 
-    // console.log(submitWalkerObj)
     postWalkerDetails(submitWalkerObj).catch((err) => {
       console.error(err.message)
     })
@@ -62,8 +61,6 @@ function Walker() {
                   placeholder="I would love to walk this dog because...."
                 ></textarea>
               </div>
-              {/* functixon clickAlert(){' '}
-          {alert('Woof Woof! Thank you for choosing me. We will be in touch!')} */}
               <NavLink
                 className="btn btn-owner"
                 to="/bookingConfirmation"
@@ -71,18 +68,6 @@ function Walker() {
               >
                 Walk me!!
               </NavLink>
-              {/* <input
-                type="button"
-                onClick={() => {
-                  alert(
-                    'Woof Woof!! Thank you for choosing me. We will be in touch!'
-                  )
-                }}
-                value="Walk with me!"
-              ></input> */}
-              {/* <button type="submit" className="button">
-            Submit
-          </button> */}
             </section>
           </form>{' '}
         </div>

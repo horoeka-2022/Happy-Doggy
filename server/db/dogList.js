@@ -21,9 +21,14 @@ function getDogList(db = connection) {
     .orderBy('availibility', 'asc')
 }
 
-// function addWalkerRequest(description, auth0Id, db = connection) {
-//   return db('walker').insert({
-//     description,
-//     auth0_id: auth0Id,
+function addWalkerRequest(description, auth0Id, db = connection) {
+  return db('walker').insert({
+    description,
+    auth0_id: auth0Id,
+  })
+}
+
+// function addOwnerRequest(details, auth0Id, db = connection) {
+//   return db('dogList').insert({
 //   })
 // }

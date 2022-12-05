@@ -22,7 +22,7 @@ function DogList() {
   async function handleClick(id) {
     const selectedDog = await doglist.find((el) => el.id === id)
     setDogInfo(selectedDog)
-    //console.log(doglist)
+    
   }
 
   function handleSignIn(e) {
