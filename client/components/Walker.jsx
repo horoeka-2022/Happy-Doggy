@@ -12,7 +12,7 @@ function Walker() {
     loginWithRedirect()
   }
 
-  //console.log(dogID)
+  console.log(dogID)
 
   function handleSubmit(event) {
     event.preventDefault()
