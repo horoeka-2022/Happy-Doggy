@@ -5,15 +5,14 @@ function BookingConfirmation() {
   return (
     <>
       <NavLink />
-      <section className="nav-container">
-        <nav className="nav">
-          <div className="rounded-full ...">
-            <h2 className="heading heading-primary">
-              Your Booking is Confirmed
-            </h2>
-          </div>
-        </nav>
-      </section>
+      <div className="dog-description">
+        <div className="card card-owner">
+          <p className="about-paragraph">
+            Thanks for your interest in walking this doggo! Your request has
+            been sent to the dog owner and we will be in touch soon. &#128062;
+          </p>
+        </div>
+      </div>
     </>
   )
 }

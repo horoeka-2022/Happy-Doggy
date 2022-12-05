@@ -16,6 +16,7 @@ export default function Home() {
     e.preventDefault()
     loginWithRedirect()
   }
+  
   return (
     <>
       <h1 className="heading heading-primary">{welcomeMsg}</h1>
