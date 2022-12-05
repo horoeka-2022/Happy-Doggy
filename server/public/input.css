@@ -169,7 +169,7 @@ a.btn, .btn {
 
 /* Profile Form */
 .profile-form {
-  width: 50%;
+  width: 60%;
   margin: 5rem auto;
   background-color: #ffbd5970;
   padding: 5rem 10rem;
@@ -188,10 +188,14 @@ a.btn, .btn {
 .input-box__input {
   display: block;
   padding: 2rem 0 2rem 1.2rem;
-  width: 50%;
+  width: 70%;
   height: 4rem;
   margin: 0.5rem 0 1.5rem;
   font-size: 2.5rem;
+}
+
+.input-box__input[name="needs"], .input-box__input[name="introduction"]{
+  height: 8rem;
 }
 
 /* Dog List */
