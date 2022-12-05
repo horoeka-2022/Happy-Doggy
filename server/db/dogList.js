@@ -3,6 +3,7 @@ const connection = require('./connection')
 module.exports = {
   getDogList,
   addWalkerRequest,
+  getImgUrl,
 }
 
 function getDogList(db = connection) {
@@ -16,7 +17,8 @@ function getDogList(db = connection) {
       'needs',
       'owner_id as ownerId',
       'walker_id as walkerId',
-      'suburb'
+      'suburb',
+      'url'
     )
     .orderBy('availibility', 'asc')
 }
@@ -26,6 +28,10 @@ function addWalkerRequest(description, auth0Id, db = connection) {
     description,
     auth0_id: auth0Id,
   })
+}
+
+function getImgUrl(id, db = connection) {
+  return db('dogList').where('id', id).select('url')
 }
 
 // function addOwnerRequest(details, auth0Id, db = connection) {

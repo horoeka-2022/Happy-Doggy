@@ -1,5 +1,5 @@
-import React from 'react'
-import { postWalkerDetails } from '../apiClient'
+import React, { useState, useEffect } from 'react'
+import { postWalkerDetails, fetchImgUrl } from '../apiClient'
 import { useParams, NavLink } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
 
@@ -7,6 +7,18 @@ function Walker() {
   const dogID = useParams()
 
   const { isAuthenticated, loginWithRedirect, user } = useAuth0()
+
+  const [dogImgUrl, setDogImgUrl] = useState('')
+
+  useEffect(() => {
+    fetchImgUrl(dogID)
+      .then((url) => {
+        setDogImgUrl(() => url.body)
+      })
+      .catch((err) => {
+        console.error(err.message)
+      })
+  }, [])
 
   function handleSignIn(e) {
     e.preventDefault()
@@ -30,7 +42,6 @@ function Walker() {
   }
   return (
     <>
-      {console.log(dogID)}
       <h1 className="heading heading-tertiary">
         Tell us more about your Dog walking experience
       </h1>{' '}
@@ -38,11 +49,7 @@ function Walker() {
       <br />
       <div className="card-container">
         <div className="card card-owner">
-          <img
-            className="card-img"
-            src={'../server/public/images/' + dogID.id + '.jpg'}
-            alt="doggy"
-          />
+          <img className="card-img" src={dogImgUrl} alt="doggy" />
           <form onSubmit={handleSubmit}>
             <section className="flex flex-col gap-4">
               <br /> <br />
