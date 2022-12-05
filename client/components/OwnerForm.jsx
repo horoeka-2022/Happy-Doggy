@@ -2,9 +2,13 @@ import React, { useState } from 'react'
 
 export default function OwnerForm() {
   const [form, setForm] = useState({
-    fullName: '',
-    phoneNumber: '',
-    address: '',
+    dogName: '',
+    breed: '',
+    dogImage: '',
+    suburb: '',
+    availibility: '',
+    needs: '',
+    introduction: '',
   })
 
   function handleChange(e) {
@@ -13,8 +17,6 @@ export default function OwnerForm() {
 
   async function handleSubmit(e) {
     e.preventDefault()
-    // const token = await getAccessTokenSilently()
-    // let updateRes = await updateUser(form, token)
     console.log('submitted!')
   }
 
@@ -48,7 +50,7 @@ export default function OwnerForm() {
           <div className="input-box">
             <label htmlFor="dogImage">Put your dog image url here!</label>
             <input
-              type="text"
+              type="url"
               name="dogImage"
               className="input-box__input"
               value={form.dogImage}
@@ -80,9 +82,11 @@ export default function OwnerForm() {
           </div>
           <div className="input-box">
             <label htmlFor="needs">Requirement</label>
-            <input
+            <textarea
               type="text"
               name="needs"
+              rows="3"
+              cols="50"
               className="input-box__input"
               value={form.needs}
               onChange={handleChange}
@@ -91,9 +95,11 @@ export default function OwnerForm() {
           </div>
           <div className="input-box">
             <label htmlFor="introduction">Introduction</label>
-            <input
+            <textarea
               type="text"
               name="introduction"
+              rows="3"
+              cols="50"
               className="input-box__input"
               value={form.introduction}
               onChange={handleChange}
