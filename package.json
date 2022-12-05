@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "dev": "run-p dev:server dev:client tailwind",
+    "dev": "run-p dev:server dev:client",
     "dev:server": "nodemon --watch server server/index.js",
     "dev:client": "vite",
     "knex": "knex --knexfile server/db/knexfile.js",
