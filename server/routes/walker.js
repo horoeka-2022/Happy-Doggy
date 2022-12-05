@@ -9,7 +9,6 @@ module.exports = router
 router.post('/:id', async (req, res) => {
   try {
     const { id } = req.body
-    console.log(id)
     const dogUrl = await db.getImgUrl(id)
     res.json(dogUrl[0].url)
   } catch (err) {
