@@ -1,4 +1,5 @@
 import request from 'superagent'
+
 export function updateUser(user, token) {
   return request
     .post('/api/v1/users')

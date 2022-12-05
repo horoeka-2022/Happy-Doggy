@@ -20,7 +20,7 @@ function DogList() {
   }, [])
 
   async function handleClick(id) {
-    const selectedDog = await doglist.find((el) => el.imgID === id)
+    const selectedDog = await doglist.find((el) => el.id === id)
     setDogInfo(selectedDog)
     
   }
@@ -41,8 +41,8 @@ function DogList() {
             return (
               <li
                 className="doglist-item"
-                key={item.imgID}
-                onClick={() => handleClick(item.imgID)}
+                key={item.id}
+                onClick={() => handleClick(item.id)}
               >
                 <p className="item-name">Name: {item.dogName}</p>
                 <p className="item-breed">Breed: {item.breed}</p>
@@ -61,7 +61,7 @@ function DogList() {
               <div className="info-container">
                 <img
                   className="dog-img"
-                  src={'./server/public/images/' + doglist[0].imgID + '.jpg'}
+                  src={'./server/public/images/' + doglist[0].id + '.jpg'}
                   alt="doggy"
                 />
                 <p className="heading heading-tertiary">
@@ -76,7 +76,7 @@ function DogList() {
                 </p>
                 <IfAuthenticated>
                   <Link
-                    to={'/walker/' + doglist[0].imgID}
+                    to={'/walker/' + doglist[0].id}
                     className="btn btn-book"
                   >
                     Take Me For A Walk !!
@@ -93,7 +93,7 @@ function DogList() {
             <div className="info-container">
               <img
                 className="dog-img"
-                src={'./server/public/images/' + doginfo.imgID + '.jpg'}
+                src={'./server/public/images/' + doginfo.id + '.jpg'}
                 alt="doggy"
               />
               <p className="heading heading-tertiary">
@@ -107,7 +107,7 @@ function DogList() {
                 Introduction: {doginfo.description}
               </p>
               <IfAuthenticated>
-                <Link to={'/walker/' + doginfo.imgID} className="btn btn-book">
+                <Link to={'/walker/' + doginfo.id} className="btn btn-book">
                   Take Me For A Walk !!
                 </Link>
               </IfAuthenticated>

@@ -8,7 +8,7 @@ module.exports = {
 function getDogList(db = connection) {
   return db('dogList')
     .select(
-      'id as imgID',
+      'id',
       'availibility',
       'dog_name as dogName',
       'breed',
