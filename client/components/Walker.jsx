@@ -5,13 +5,14 @@ import { useAuth0 } from '@auth0/auth0-react'
 
 function Walker() {
   const dogID = useParams()
+ 
   const { isAuthenticated, loginWithRedirect, user } = useAuth0()
 
   function handleSignIn(e) {
     e.preventDefault()
     loginWithRedirect()
   }
-
+  console.log(user)
   //console.log(dogID)
 
   function handleSubmit(event) {

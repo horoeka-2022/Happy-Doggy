@@ -10,7 +10,7 @@ export async function getDogList() {
   let dl = await request
     .get('/api/v1/doglist/')
     .then((response) => response.body)
-  // console.log(dl[0])
+
   // return request.get('/api/v1/dogList/').then((response) => response.body)
   return dl
 }

@@ -22,7 +22,7 @@ function Nav() {
     e.preventDefault()
     loginWithRedirect()
   }
-  console.log(user)
+  
   return (
     <>
       <section className="nav-container">
