@@ -22,7 +22,6 @@ function DogList() {
   async function handleClick(id) {
     const selectedDog = await doglist.find((el) => el.id === id)
     setDogInfo(selectedDog)
-    
   }
 
   function handleSignIn(e) {
@@ -59,11 +58,7 @@ function DogList() {
           ) : doginfo.length < 1 ? (
             <>
               <div className="info-container">
-                <img
-                  className="dog-img"
-                  src={'./server/public/images/' + doglist[0].id + '.jpg'}
-                  alt="doggy"
-                />
+                <img className="dog-img" src={doglist[0].url} alt="doggy" />
                 <p className="heading heading-tertiary">
                   Name: {doglist[0].dogName}
                 </p>
@@ -91,11 +86,7 @@ function DogList() {
             </>
           ) : (
             <div className="info-container">
-              <img
-                className="dog-img"
-                src={'./server/public/images/' + doginfo.id + '.jpg'}
-                alt="doggy"
-              />
+              <img className="dog-img" src={doginfo.url} alt="doggy" />
               <p className="heading heading-tertiary">
                 Name: {doginfo.dogName}
               </p>

@@ -14,6 +14,11 @@ export async function getDogList() {
   return dl
 }
 
+export async function fetchImgUrl(id) {
+  console.log(id)
+  return request.post(`/api/v1/walker/${id}`).send(id)
+}
+
 //get route for booking
 
 //post route for booking

@@ -26,6 +26,18 @@ router.get('/', async (req, res) => {
   }
 })
 
+// Post /api/v1/doglist
+router.post('/:id', async (req, res) => {
+  try {
+    console.log(req.body)
+    const dogUrl = await db.getImgUrl(req.body)
+    res.json(dogUrl)
+  } catch (err) {
+    res.status(500).send(err.message)
+    console.error(err.message)
+  }
+})
+
 // POST /api/v1/doglist
 router.post('/', checkJwt, (req, res) => {
   const auth0Id = req.user?.sub

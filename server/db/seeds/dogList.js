@@ -18,6 +18,7 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'Avondale, Auckland',
         walker_id: 'auth0|638ac80284d437614af49277',
+        url: 'https://st.depositphotos.com/2869437/3739/i/450/depositphotos_37392643-stock-photo-close-up-of-pug.jpg',
       },
       {
         id: 5,
@@ -31,6 +32,7 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'Waiheke, Auckland',
         walker_id: 'auth0|638ac80284d437614af49277',
+        url: 'https://st.depositphotos.com/2869437/3739/i/450/depositphotos_37392643-stock-photo-close-up-of-pug.jpg',
       },
 
       {
@@ -46,6 +48,7 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'Glen Eden, Auckland',
         walker_id: 'auth0|638ac80284d437614af49277',
+        url: 'https://st.depositphotos.com/2869437/3739/i/450/depositphotos_37392643-stock-photo-close-up-of-pug.jpg',
       },
       {
         id: 7,
@@ -59,6 +62,7 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'Devonport, Auckland',
         walker_id: 'auth0|638ac80284d437614af49277',
+        url: 'https://st.depositphotos.com/2869437/3739/i/450/depositphotos_37392643-stock-photo-close-up-of-pug.jpg',
       },
       {
         id: 8,
@@ -72,6 +76,7 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'Pakuranga, Auckland',
         walker_id: 'auth0|638ac80284d437614af49277',
+        url: 'https://st.depositphotos.com/2869437/3739/i/450/depositphotos_37392643-stock-photo-close-up-of-pug.jpg',
       },
 
       {
@@ -86,6 +91,7 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'CBD, Auckland',
         walker_id: 'auth0|638ac80284d437614af49277',
+        url: 'https://st.depositphotos.com/2869437/3739/i/450/depositphotos_37392643-stock-photo-close-up-of-pug.jpg',
       },
       {
         id: 10,
@@ -99,6 +105,7 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'Grey Lynn, Auckland',
         walker_id: 'auth0|638ac80284d437614af49277',
+        url: 'https://st.depositphotos.com/2869437/3739/i/450/depositphotos_37392643-stock-photo-close-up-of-pug.jpg',
       },
       {
         id: 11,
@@ -112,6 +119,7 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'Mangere, Auckland',
         walker_id: 'auth0|638ac80284d437614af49277',
+        url: 'https://st.depositphotos.com/2869437/3739/i/450/depositphotos_37392643-stock-photo-close-up-of-pug.jpg',
       },
 
       {
@@ -127,6 +135,7 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'Howick, Auckland',
         walker_id: 'auth0|638ac80284d437614af49277',
+        url: 'https://st.depositphotos.com/2869437/3739/i/450/depositphotos_37392643-stock-photo-close-up-of-pug.jpg',
       },
     ])
 }
