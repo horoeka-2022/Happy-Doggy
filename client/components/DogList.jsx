@@ -54,7 +54,7 @@ function DogList() {
         </ul>
         <div className="doginfo">
           {doglist.length < 1 ? (
-            <p className="loading">loading</p>
+            <p className="loading">loading...</p>
           ) : doginfo.length < 1 ? (
             <>
               <div className="info-container">

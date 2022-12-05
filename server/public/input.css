@@ -235,6 +235,7 @@ a.btn, .btn {
 }
 
 .info-container {
+  position: relative;
   padding: 5rem;
   height: 70vh;
   text-align: center;
@@ -266,4 +267,8 @@ a.btn-book:hover {
 
 .loading {
   font-size: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

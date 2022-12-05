@@ -33,8 +33,3 @@ function addWalkerRequest(description, auth0Id, db = connection) {
 function getImgUrl(id, db = connection) {
   return db('dogList').where('id', id).select('url')
 }
-
-// function addOwnerRequest(details, auth0Id, db = connection) {
-//   return db('dogList').insert({
-//   })
-// }
