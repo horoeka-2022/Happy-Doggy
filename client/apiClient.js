@@ -1,3 +1,4 @@
+import { async } from 'regenerator-runtime'
 import request from 'superagent'
 
 //const walkerUrl = '/api/v1/walker'
@@ -19,6 +20,7 @@ export async function fetchImgUrl(id) {
   return request.post(`/api/v1/walker/${id}`).send(id)
 }
 
-//get route for booking
-
-//post route for booking
+export async function sendEmail() {
+  console.log('inside send email')
+  return request.post(`/api/v1/sendemail/`).send()
+}
