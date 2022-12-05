@@ -36,6 +36,5 @@ function getImgUrl(id, db = connection) {
 
 // function addOwnerRequest(details, auth0Id, db = connection) {
 //   return db('dogList').insert({
-
 //   })
 // }
