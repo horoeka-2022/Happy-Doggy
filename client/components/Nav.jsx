@@ -4,7 +4,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
 
 function Nav() {
-  const { logout, loginWithRedirect, user, isLoading } = useAuth0()
+  const { logout, loginWithRedirect } = useAuth0()
 
   function handleLogoff(e) {
     e.preventDefault()
@@ -22,7 +22,7 @@ function Nav() {
     e.preventDefault()
     loginWithRedirect()
   }
-  
+
   return (
     <>
       <section className="nav-container">
@@ -52,7 +52,6 @@ function Nav() {
               <Link to="/" onClick={handleLogoff}>
                 Log off
               </Link>
-             
             </IfAuthenticated>
 
             <IfNotAuthenticated className="guest-nav">

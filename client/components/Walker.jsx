@@ -64,7 +64,7 @@ function Walker() {
                 <textarea
                   rows="4"
                   cols="50"
-                  name="walkerReason" //pls double check this field name from database
+                  name="walkerReason"
                   placeholder="I would love to walk this dog because...."
                 ></textarea>
               </div>

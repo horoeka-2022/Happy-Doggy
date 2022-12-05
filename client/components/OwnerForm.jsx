@@ -13,8 +13,6 @@ export default function OwnerForm() {
 
   async function handleSubmit(e) {
     e.preventDefault()
-    // const token = await getAccessTokenSilently()
-    // let updateRes = await updateUser(form, token)
     console.log('submitted!')
   }
 
