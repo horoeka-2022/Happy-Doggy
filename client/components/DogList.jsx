@@ -10,7 +10,6 @@ function DogList() {
   const [doginfo, setDogInfo] = useState([])
 
   useEffect(() => {
-    //console.log(doglist)
     getDogList()
       .then((result) => {
         setDoglist(() => result)
@@ -108,10 +107,7 @@ function DogList() {
                 Introduction: {doginfo.description}
               </p>
               <IfAuthenticated>
-                <Link
-                  to={'/walker/' + doglist[0].imgID}
-                  className="btn btn-book"
-                >
+                <Link to={'/walker/' + doginfo.imgID} className="btn btn-book">
                   Take Me For A Walk !!
                 </Link>
               </IfAuthenticated>

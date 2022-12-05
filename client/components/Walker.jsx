@@ -12,8 +12,6 @@ function Walker() {
     e.preventDefault()
     loginWithRedirect()
   }
-  console.log(user)
-  //console.log(dogID)
 
   function handleSubmit(event) {
     event.preventDefault()
