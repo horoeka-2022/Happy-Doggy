@@ -2,7 +2,7 @@ const connection = require('./connection')
 
 module.exports = {
   getDogList,
-  addWalkerRequest,
+  // addWalkerRequest,
 }
 
 function getDogList(db = connection) {
@@ -30,6 +30,5 @@ function addWalkerRequest(description, auth0Id, db = connection) {
 
 // function addOwnerRequest(details, auth0Id, db = connection) {
 //   return db('dogList').insert({
-
 //   })
 // }
