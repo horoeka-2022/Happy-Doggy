@@ -46,6 +46,17 @@ export default function OwnerForm() {
             />
           </div>
           <div className="input-box">
+            <label htmlFor="dogImage">Put your dog image url here!</label>
+            <input
+              type="text"
+              name="dogImage"
+              className="input-box__input"
+              value={form.dogImage}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="input-box">
             <label htmlFor="suburb">Location</label>
             <input
               type="text"
