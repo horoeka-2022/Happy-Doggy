@@ -2,16 +2,23 @@ const request = require('supertest')
 
 const server = require('../server')
 const db = require('../db/dogList')
+//management in reference to auth0.js file line 43?
 const management = require('../auth0')
 
 jest.mock('../db/dogList')
+//mocking the path?
 jest.mock('../auth0')
-
+//mocking the path?
+//write the test
 test('GET /v1/doglist/ should return a list of dogs', () => {
+  //getDogList in server routes db js
   db.getDogList.mockImplementation(() => {
     return Promise.resolve([{ breed: 'Pug', dogName: 'Robert' }])
+    //returns bunch of dogs
   })
   management.getUser.mockImplementation(() => {
+    //mocking line 18 in same file
+    //make some mock data of what it returns - it does return the userdata
     return Promise.resolve({
       user_metadata: {
         fullName: 'cj',
@@ -25,6 +32,7 @@ test('GET /v1/doglist/ should return a list of dogs', () => {
     .then((res) => {
       //console.log(res.body)
       expect(res.statusCode).toBe(200)
+      //we expect the respone to equal
       expect(res.body).toEqual([
         {
           breed: 'Pug',
