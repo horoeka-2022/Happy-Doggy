@@ -13,6 +13,7 @@ function DogList() {
     getDogList()
       .then((result) => {
         setDoglist(() => result)
+        console.log(result)
       })
       .catch((err) => {
         console.error(err.message)
@@ -55,7 +56,7 @@ function DogList() {
         <div className="doginfo">
           {doglist.length < 1 ? (
             <p className="loading">loading...</p>
-          ) : doginfo.length > 1 ? (
+          ) : doginfo.length === 0 ? (
             <>
               <div className="info-container">
                 <img className="dog-img" src={doglist[0].url} alt="doggy" />

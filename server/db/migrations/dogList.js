@@ -7,7 +7,6 @@ exports.up = (knex) => {
     table.date('availibility')
     table.string('description')
     table.string('owner_id')
-    table.string('walker_id')
     table.string('suburb')
     table.string('url')
   })
