@@ -14,7 +14,6 @@ router.get('/', async (req, res) => {
     const newDogLists = await Promise.all(
       dogLists.map(async (dogList) => {
         const ownerDetails = await management.getUser(dogList.ownerId)
-        console.log(ownerDetails)
         return { ...dogList, ...ownerDetails.user_metadata }
       })
     )

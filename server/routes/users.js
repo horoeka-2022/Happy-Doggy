@@ -18,7 +18,6 @@ router.get('/', checkJwt, (req, res) => {
 })
 
 router.post('/', checkJwt, async (req, res) => {
-  console.log(checkJwt)
   const auth0_id = req.user?.sub
   const { fullName, phoneNumber, address } = req.body
   const userDetails = {
