@@ -4,6 +4,7 @@ module.exports = {
   getDogList,
   addWalkerRequest,
   getImgUrl,
+  addPost,
 }
 
 function getDogList(db = connection) {
@@ -32,4 +33,20 @@ function addWalkerRequest(description, auth0Id, db = connection) {
 
 function getImgUrl(id, db = connection) {
   return db('dogList').where('id', id).select('url')
+}
+
+function addPost(
+  { dogName, breed, url, suburb, availibility, needs, introduction },
+  db = connection
+) {
+  console.log(dogName)
+  return db('dogList').insert({
+    dog_name: dogName,
+    breed,
+    url,
+    suburb,
+    availibility,
+    needs,
+    description: introduction,
+  })
 }
