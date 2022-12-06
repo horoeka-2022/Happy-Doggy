@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { fetchImgUrl, sendEmail } from '../apiClient'
-import { useParams, NavLink } from 'react-router-dom'
+import { useParams, NavLink, useNavigate } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
 
 function Walker() {
-  const { id } = useParams()
-
-  const { isAuthenticated, loginWithRedirect } = useAuth0()
+  const dogId = useParams()
+  const navigate = useNavigate()
+  const { isAuthenticated, loginWithRedirect, user } = useAuth0()
 
   const [dogImgUrl, setDogImgUrl] = useState('')
   const [msg, setMessage] = useState('')
 
   useEffect(() => {
-    fetchImgUrl(id)
+    fetchImgUrl(dogId)
       .then((url) => {
         setDogImgUrl(() => url.body)
       })
@@ -30,13 +30,26 @@ function Walker() {
     setMessage(() => e.target.value)
   }
   async function handleSubmit(event) {
-    console.log('Submitting form...')
     event.preventDefault()
 
-    //Call Api funtion sendEmail
-    await sendEmail({ msg }).catch((err) => {
+    let msg = {
+      to: user.email,
+      from: 'happy.4.doggy@gmail.com',
+      subject: 'Booking request recieved',
+      text:
+        'Thanks  ' +
+        user.given_name +
+        ' for your booking, your request is sent to the Owner. We will get back to you shortly',
+      html:
+        'Thanks  ' +
+        user.given_name +
+        ' for your booking, your request is sent to the Owner. We will get back to you shortly',
+    }
+
+    await sendEmail(msg).catch((err) => {
       console.error(err.message)
     })
+    navigate('/bookingConfirmation')
   }
   return (
     <>
@@ -52,7 +65,6 @@ function Walker() {
             <section className="flex flex-col gap-4">
               <br /> <br />
               <label htmlFor="review">
-                {' '}
                 <h2>
                   Why I want to walk this Happy Doggy, and my experience with
                   dogs.
@@ -71,13 +83,15 @@ function Walker() {
               <NavLink
                 className="btn btn-owner"
                 to="/bookingConfirmation"
-                onClick={!isAuthenticated && handleSignIn}
+                onClick={
+                  (!isAuthenticated && handleSignIn) ||
+                  (isAuthenticated && handleSubmit)
+                }
               >
                 Walk me!!
               </NavLink>
-              <button type="submit">submit</button>
             </section>
-          </form>{' '}
+          </form>
         </div>
       </div>
     </>
