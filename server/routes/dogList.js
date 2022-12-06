@@ -11,6 +11,8 @@ module.exports = router
 router.get('/', async (req, res) => {
   try {
     const dogLists = await db.getDogList()
+    console.log(dogLists)
+
     const newDogLists = await Promise.all(
       dogLists.map(async (dogList) => {
         const ownerDetails = await management.getUser(dogList.ownerId)
@@ -18,7 +20,6 @@ router.get('/', async (req, res) => {
         return { ...dogList, ...ownerDetails.user_metadata }
       })
     )
-
     res.json(newDogLists)
   } catch (err) {
     res.status(500).send(err.message)

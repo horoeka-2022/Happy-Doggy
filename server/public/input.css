@@ -195,7 +195,7 @@ a.btn, .btn {
 }
 
 .input-box__input[name="needs"], .input-box__input[name="introduction"]{
-  height: 8rem;
+  height: 10rem;
 }
 
 /* Dog List */
@@ -261,7 +261,9 @@ a.btn-book:hover {
 }
 
 .dog-img {
+  min-height: 20rem;
   max-height: 30rem;
+  object-fit: cover;
 }
 
 .dog-description {

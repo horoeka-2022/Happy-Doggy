@@ -36,6 +36,7 @@ function Profile() {
     e.preventDefault()
     const token = await getAccessTokenSilently()
     let updateRes = await updateUser(form, token)
+    console.log(token)
     console.log(updateRes)
   }
 

@@ -1,6 +1,11 @@
+import { useAuth0 } from '@auth0/auth0-react'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { postAvailableDog } from '../apiClient'
 
 export default function OwnerForm() {
+  const { getAccessTokenSilently } = useAuth0()
+  const navigate = useNavigate()
   const [form, setForm] = useState({
     dogName: '',
     breed: '',
@@ -17,7 +22,9 @@ export default function OwnerForm() {
 
   async function handleSubmit(e) {
     e.preventDefault()
-    console.log('submitted!')
+    const token = await getAccessTokenSilently()
+    await postAvailableDog(form, token)
+    navigate('/doglist')
   }
 
   return (
@@ -50,7 +57,7 @@ export default function OwnerForm() {
           <div className="input-box">
             <label htmlFor="dogImage">Put your dog image url here!</label>
             <input
-              type="url"
+              type="text"
               name="dogImage"
               className="input-box__input"
               value={form.dogImage}
