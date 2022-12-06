@@ -4,7 +4,7 @@ import '@testing-library/jest-dom'
 
 import About from './About'
 
-test('hello', () => {
+test('The About page should display a heading: About Happy Doggy', () => {
   render(<About />)
 
   const component = screen.getByRole('heading', { level: 1 })
