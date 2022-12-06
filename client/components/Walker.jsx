@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { postWalkerDetails, fetchImgUrl } from '../apiClient'
+import { postWalkerDetails, fetchImgUrl, sendEmail } from '../apiClient'
 import { useParams, NavLink } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
 
@@ -39,6 +39,13 @@ function Walker() {
     postWalkerDetails(submitWalkerObj).catch((err) => {
       console.error(err.message)
     })
+
+    //Call Api funtion sendemail
+    sendEmail()
+      .then(() => {})
+      .catch((err) => {
+        console.error(err.message)
+      })
   }
   return (
     <>
