@@ -17,6 +17,11 @@ export async function fetchImgUrl(id) {
 }
 export async function sendEmail() {
   console.log('inside send email')
-  return request.post(`/api/v1/sendemail/`).send()
+  return request
+    .post(`/api/v1/sendemail/`)
+    .set(
+      'someheader',
+      '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'
+    )
+    .send()
 }
-
