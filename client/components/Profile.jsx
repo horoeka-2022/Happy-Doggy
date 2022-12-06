@@ -14,7 +14,6 @@ function Profile() {
     getAccessTokenSilently()
       .then(getUser)
       .then((userDetails) => {
-        console.log(userDetails)
         setForm(() => ({
           fullName: userDetails ? userDetails?.user_metadata?.fullName : '',
           phoneNumber: userDetails
