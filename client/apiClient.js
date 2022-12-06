@@ -23,6 +23,6 @@ export async function fetchImgUrl(id) {
 }
 
 export async function sendEmail(msg) {
-  console.log('yo' + msg)
+  console.log('yo' + { msg })
   return await request.post(`/api/v1/sendemail`).send(msg)
 }
