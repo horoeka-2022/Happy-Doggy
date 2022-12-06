@@ -36,14 +36,14 @@ function getImgUrl(id, db = connection) {
 }
 
 function addPost(
-  { dogName, breed, url, suburb, availibility, needs, introduction },
+  { dogName, breed, dogImage, suburb, availibility, needs, introduction },
   db = connection
 ) {
   console.log(dogName)
   return db('dogList').insert({
     dog_name: dogName,
     breed,
-    url,
+    url: dogImage,
     suburb,
     availibility,
     needs,

@@ -18,7 +18,6 @@ router.get('/', async (req, res) => {
         return { ...dogList, ...ownerDetails.user_metadata }
       })
     )
-
     res.json(newDogLists)
   } catch (err) {
     res.status(500).send(err.message)

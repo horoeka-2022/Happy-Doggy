@@ -5,7 +5,6 @@ export async function postWalkerDetails(objWalkerDetail) {
 }
 
 export async function postAvailableDog(objOwnerDetail, token) {
-  console.log(objOwnerDetail)
   return request
     .post('/api/v1/ownerform/')
     .set('Authorization', `Bearer ${token}`)
@@ -20,6 +19,5 @@ export async function getDogList() {
 }
 
 export async function fetchImgUrl(id) {
-  console.log(id)
   return request.post(`/api/v1/walker/${id}`).send(id)
 }

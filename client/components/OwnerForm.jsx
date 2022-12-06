@@ -54,7 +54,7 @@ export default function OwnerForm() {
           <div className="input-box">
             <label htmlFor="dogImage">Put your dog image url here!</label>
             <input
-              type="url"
+              type="text"
               name="dogImage"
               className="input-box__input"
               value={form.dogImage}
