@@ -1,5 +1,7 @@
 const express = require('express')
+const dotenv = require('dotenv')
 
+dotenv.config()
 const sgMail = require('@sendgrid/mail')
 
 const router = express.Router()
@@ -19,9 +21,8 @@ router.post('/', async (req, res) => {
       text: req.body.text,
       html: req.body.html,
     }
-    sgMail.send(msg)
+    await sgMail.send(msg)
     res.sendStatus(201)
-    return 'Email Sent!!'
   } catch (err) {
     res.status(500).send(err.message)
     console.error(err.message)
