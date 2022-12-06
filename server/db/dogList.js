@@ -17,7 +17,6 @@ function getDogList(db = connection) {
       'description',
       'needs',
       'owner_id as ownerId',
-      'walker_id as walkerId',
       'suburb',
       'url'
     )
@@ -50,6 +49,5 @@ function addPost(
     needs,
     description: introduction,
     owner_id: auth0Id,
-    walker_id: auth0Id,
   })
 }
