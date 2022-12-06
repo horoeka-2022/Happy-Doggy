@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react'
-import { postWalkerDetails, fetchImgUrl } from '../apiClient'
+import { fetchImgUrl, sendEmail } from '../apiClient'
 import { useParams, NavLink } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
 
 function Walker() {
-  const dogID = useParams()
+  const { id } = useParams()
 
-  const { isAuthenticated, loginWithRedirect, user } = useAuth0()
+  const { isAuthenticated, loginWithRedirect } = useAuth0()
 
   const [dogImgUrl, setDogImgUrl] = useState('')
+  const [msg, setMessage] = useState('')
 
   useEffect(() => {
-    fetchImgUrl(dogID)
+    fetchImgUrl(id)
       .then((url) => {
         setDogImgUrl(() => url.body)
       })
@@ -25,18 +26,15 @@ function Walker() {
     loginWithRedirect()
   }
 
-  function handleSubmit(event) {
+  function handleChange(e) {
+    setMessage(() => e.target.value)
+  }
+  async function handleSubmit(event) {
+    console.log('Submitting form...')
     event.preventDefault()
 
-    const experience = event.currentTarget.elements.experience.value
-    const walkerReason = event.currentTarget.elements.walkerReason.value
-
-    const submitWalkerObj = {
-      experience: experience,
-      walkerReason: walkerReason,
-    }
-
-    postWalkerDetails(submitWalkerObj).catch((err) => {
+    //Call Api funtion sendEmail
+    await sendEmail({ msg }).catch((err) => {
       console.error(err.message)
     })
   }
@@ -64,6 +62,8 @@ function Walker() {
                 <textarea
                   rows="4"
                   cols="50"
+                  value={msg}
+                  onChange={handleChange}
                   name="walkerReason"
                   placeholder="I would love to walk this dog because...."
                 ></textarea>
@@ -75,6 +75,7 @@ function Walker() {
               >
                 Walk me!!
               </NavLink>
+              <button type="submit">submit</button>
             </section>
           </form>{' '}
         </div>

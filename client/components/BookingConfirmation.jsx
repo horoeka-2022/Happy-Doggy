@@ -1,16 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { sendEmail } from '../apiClient'
+
+
 function BookingConfirmation() {
-  const [email, setEmail] = useState('')
-  //Call Api funtion sendemail
-  sendEmail(email)
-    .then(() => {
-      setEmail()
-    })
-    .catch((err) => {
-      console.error(err.message)
-    })
   return (
     <>
       <NavLink />

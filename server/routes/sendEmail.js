@@ -15,11 +15,11 @@ router.post('/', async (req, res) => {
     console.log(req.body)
     sgMail.setApiKey(process.env.SENDGRID_API_KEY)
     const msg = {
-      to: req.body.to,
-      from: req.body.from,
-      subject: req.body.subject,
-      text: req.body.text,
-      html: req.body.html,
+      to: 'sadhna.singh.work@gmail.com',
+      from: 'happy.4.doggy@gmail.com',
+      subject: 'Booking confirmation',
+      text: req.body.msg,
+      html: req.body.msg,
     }
     await sgMail.send(msg)
     res.sendStatus(201)
