@@ -12,7 +12,7 @@ exports.seed = async (knex) => {
         dog_name: 'Robert',
         breed: 'Pug',
         needs: 'Not good with kids, needs lots of exercise.',
-        availibility: '11/12/22',
+        availibility: '2022-12-11',
         description:
           'Robert is a very loving lad and enjoys cuddles. He likes long walks and sunbathing. He is bursting with energy and enjoys a game of frisbee.',
         owner_id: 'auth0|638ac80284d437614af49277',
@@ -25,7 +25,7 @@ exports.seed = async (knex) => {
         dog_name: 'Lilly',
         breed: 'Bulldog',
         needs: 'History of chasing cats and birds',
-        availibility: '10/12/22',
+        availibility: '2022-12-10',
         description:
           'Lilly likes to explore and often finds herself becoming too curious about cats and birds. She loves playing in the water and doing zoomies.',
         owner_id: 'auth0|638ac80284d437614af49277',
@@ -40,7 +40,7 @@ exports.seed = async (knex) => {
         breed: 'Cocker Spaniel',
         needs:
           'Rescue dog with anxiety, needs low stimulation and keep her away from crowds.',
-        availibility: '18/12/22',
+        availibility: '2022-12-18',
         description:
           'Maisie is a gentle soul. She was rescued from the wilderness and has slowly learnt to trust hoomans. She enjoys calming hikes in nature and a lot of space.',
         owner_id: 'auth0|638ac80284d437614af49277',
@@ -53,7 +53,7 @@ exports.seed = async (knex) => {
         dog_name: 'Tango',
         breed: 'Greyhound',
         needs: 'Soft voices, reassurance and rewards(esp food!!)',
-        availibility: '12/12/22',
+        availibility: '2022-12-19',
         description:
           'Tango is a little shy but will respond well to commands, and become a velcro dog once they trust you.',
         owner_id: 'auth0|638ac80284d437614af49277',
@@ -66,7 +66,7 @@ exports.seed = async (knex) => {
         dog_name: 'Alfred',
         breed: 'Staffy cross',
         needs: 'Long and active walks',
-        availibility: '19/12/22',
+        availibility: '2022-12-23',
         description:
           'Alfred has a large amount of energy but is obediant and good with all ages.',
         owner_id: 'auth0|638ac80284d437614af49277',
@@ -80,7 +80,7 @@ exports.seed = async (knex) => {
         dog_name: 'Tank',
         breed: 'Doberman ',
         needs: 'Constant attention and cuddles',
-        availibility: '18/12/22',
+        availibility: '2022-12-18',
         description:
           'Tank loves meeting new people and would love to be your new best friend.',
         owner_id: 'auth0|638ac80284d437614af49277',
@@ -93,7 +93,7 @@ exports.seed = async (knex) => {
         dog_name: 'Accorn',
         breed: 'Daschund',
         needs: 'Gentle music to put them to sleep',
-        availibility: '15/12/22',
+        availibility: '2022-12-15',
         description:
           'Accorn is a lovable dog who is a little slower pace, likes listening to classical music (Accorn is classy!!)',
         owner_id: 'auth0|638ac80284d437614af49277',
@@ -106,7 +106,7 @@ exports.seed = async (knex) => {
         dog_name: 'Hero',
         breed: 'Bichon',
         needs: 'A social environment',
-        availibility: '19/12/22',
+        availibility: '2022-12-17',
         description:
           'Hero is great with other dogs and begs for food non stop. Do not give in to the puppy eyes!',
         owner_id: 'auth0|638ac80284d437614af49277',
@@ -121,7 +121,7 @@ exports.seed = async (knex) => {
         breed: 'Boarder Collie',
         needs:
           'Def needs constant leesh as she likes to wander up to strangers!',
-        availibility: '26/12/22',
+        availibility: '2022-12-26',
         description:
           'Cheesecake is another rescue, but not shy and well-adjusted',
         owner_id: 'auth0|638ac80284d437614af49277',
