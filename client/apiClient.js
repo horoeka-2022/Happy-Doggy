@@ -1,7 +1,7 @@
 import request from 'superagent'
 
 export async function postWalkerDetails(objWalkerDetail) {
-  return request.post('/api/v1/walker').send(objWalkerDetail)
+  return request.post('/api/v1/walker').json(objWalkerDetail)
 }
 
 export async function postAvailableDog(objOwnerDetail, token) {
@@ -21,13 +21,8 @@ export async function getDogList() {
 export async function fetchImgUrl(id) {
   return request.post(`/api/v1/walker/${id}`).send(id)
 }
-export async function sendEmail() {
-  console.log('inside send email')
-  return request
-    .post(`/api/v1/sendemail/`)
-    .set(
-      'someheader',
-      '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'
-    )
-    .send()
+
+export async function sendEmail(msg) {
+  console.log('yo' + msg)
+  return await request.post(`/api/v1/sendemail`).send(msg)
 }
