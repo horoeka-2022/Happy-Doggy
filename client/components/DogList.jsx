@@ -12,15 +12,13 @@ function DogList() {
   useEffect(() => {
     getDogList()
       .then((result) => {
+        console.log(result)
         setDoglist(() => result)
       })
       .catch((err) => {
         console.error(err.message)
       })
   }, [])
-
-
-  
 
   async function handleClick(id) {
     const selectedDog = await doglist.find((el) => el.id === id)
@@ -58,7 +56,7 @@ function DogList() {
         <div className="doginfo">
           {doglist.length < 1 ? (
             <p className="loading">loading...</p>
-          ) : doginfo.length < 1 ? (
+          ) : doginfo.length > 1 ? (
             <>
               <div className="info-container">
                 <img className="dog-img" src={doglist[0].url} alt="doggy" />
