@@ -55,7 +55,7 @@ function DogList() {
         <div className="doginfo">
           {doglist.length < 1 ? (
             <p className="loading">loading...</p>
-          ) : doginfo.length < 1 ? (
+          ) : doginfo.length > 1 ? (
             <>
               <div className="info-container">
                 <img className="dog-img" src={doglist[0].url} alt="doggy" />
