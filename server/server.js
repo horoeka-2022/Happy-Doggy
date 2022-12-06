@@ -7,7 +7,6 @@ const walkerRoute = require('./routes/walker')
 const ownerRoute = require('./routes/owner')
 const sendEmail = require('./routes/sendEmail')
 
-
 const server = express()
 
 server.use(express.json())

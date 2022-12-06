@@ -30,9 +30,10 @@ test('GET /v1/doglist/ should return a list of dogs', () => {
   return request(server)
     .get('/api/v1/doglist')
     .then((res) => {
+      //console.log('hi')
       //console.log(res.body)
       expect(res.statusCode).toBe(200)
-      //we expect the respone to equal
+      //we expect the response to equal
       expect(res.body).toEqual([
         {
           breed: 'Pug',
