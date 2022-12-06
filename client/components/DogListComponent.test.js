@@ -39,8 +39,8 @@ test('when the Dog List is rendered, Lilly should be the name of the dog picture
   )
   //await
   //ACT
-  const doggyname = await screen.findByText(/Lilly/i)
+  const doggyname = await screen.findAllByText(/Lilly/i)
 
   // ASSERT
-  expect(doggyname).toBeInTheDocument()
+  expect(doggyname[0]).toBeInTheDocument()
 })
