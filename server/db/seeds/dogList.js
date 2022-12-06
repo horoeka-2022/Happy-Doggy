@@ -34,20 +34,6 @@ exports.seed = async (knex) => {
       },
 
       {
-        id: 6,
-
-        dog_name: 'Maisie',
-        breed: 'Cocker Spaniel',
-        needs:
-          'Rescue dog with anxiety, needs low stimulation and keep her away from crowds.',
-        availibility: '2022-12-18',
-        description:
-          'Maisie is a gentle soul. She was rescued from the wilderness and has slowly learnt to trust hoomans. She enjoys calming hikes in nature and a lot of space.',
-        owner_id: 'auth0|638ac80284d437614af49277',
-        suburb: 'Glen Eden, Auckland',
-        url: 'https://media-be.chewy.com/wp-content/uploads/2021/05/05180433/Cocker-Spaniel_FeaturedImage-1024x615.jpg',
-      },
-      {
         id: 7,
 
         dog_name: 'Tango',
@@ -59,19 +45,6 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'Devonport, Auckland',
         url: 'https://cdn-fastly.petguide.com/media/2022/02/28/8264126/greyhound.jpg?size=720x845&nocrop=1',
-      },
-      {
-        id: 8,
-
-        dog_name: 'Alfred',
-        breed: 'Staffy cross',
-        needs: 'Long and active walks',
-        availibility: '2022-12-23',
-        description:
-          'Alfred has a large amount of energy but is obediant and good with all ages.',
-        owner_id: 'auth0|638ac80284d437614af49277',
-        suburb: 'Pakuranga, Auckland',
-        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_yF3EzvhHOSFVWBom1647xJWsOtmFkj27vg&usqp=CAU',
       },
 
       {
@@ -99,34 +72,6 @@ exports.seed = async (knex) => {
         owner_id: 'auth0|638ac80284d437614af49277',
         suburb: 'Grey Lynn, Auckland',
         url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIXwY8KsuopM9V5s90xbD3FNwkpEbGb_uRQ&usqp=CAU',
-      },
-      {
-        id: 11,
-
-        dog_name: 'Hero',
-        breed: 'Bichon',
-        needs: 'A social environment',
-        availibility: '2022-12-17',
-        description:
-          'Hero is great with other dogs and begs for food non stop. Do not give in to the puppy eyes!',
-        owner_id: 'auth0|638ac80284d437614af49277',
-        suburb: 'Mangere, Auckland',
-        url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjXy1kMYtYaI0Y-fENDBotVaJqcrxuZ46f6w&usqp=CAU',
-      },
-
-      {
-        id: 12,
-
-        dog_name: 'Cheesecake',
-        breed: 'Boarder Collie',
-        needs:
-          'Def needs constant leesh as she likes to wander up to strangers!',
-        availibility: '2022-12-26',
-        description:
-          'Cheesecake is another rescue, but not shy and well-adjusted',
-        owner_id: 'auth0|638ac80284d437614af49277',
-        suburb: 'Howick, Auckland',
-        url: 'https://cf.ltkcdn.net/dogs/dog-breeds/images/std/323839-800x533-border-collie-breed.jpg',
       },
     ])
 }
