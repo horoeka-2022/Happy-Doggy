@@ -1,9 +1,11 @@
 import { useAuth0 } from '@auth0/auth0-react'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { postAvailableDog } from '../apiClient'
 
 export default function OwnerForm() {
   const { getAccessTokenSilently } = useAuth0()
+  const navigate = useNavigate()
   const [form, setForm] = useState({
     dogName: '',
     breed: '',
@@ -22,6 +24,7 @@ export default function OwnerForm() {
     e.preventDefault()
     const token = await getAccessTokenSilently()
     await postAvailableDog(form, token)
+    navigate('/doglist')
   }
 
   return (

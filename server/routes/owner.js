@@ -8,9 +8,8 @@ module.exports = router
 
 router.post('/', checkJwt, async (req, res) => {
   try {
-    // const auth0_id = req.user?.sub
-    console.log(checkJwt)
-    await db.addPost(req.body)
+    const auth0_id = req.user?.sub
+    await db.addPost(req.body, auth0_id)
     res.sendStatus(201)
   } catch (err) {
     res.status(500).send(err.message)

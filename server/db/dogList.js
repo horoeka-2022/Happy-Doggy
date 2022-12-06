@@ -37,6 +37,7 @@ function getImgUrl(id, db = connection) {
 
 function addPost(
   { dogName, breed, dogImage, suburb, availibility, needs, introduction },
+  auth0Id,
   db = connection
 ) {
   console.log(dogName)
@@ -48,5 +49,7 @@ function addPost(
     availibility,
     needs,
     description: introduction,
+    owner_id: auth0Id,
+    walker_id: auth0Id,
   })
 }
