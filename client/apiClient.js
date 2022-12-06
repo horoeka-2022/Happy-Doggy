@@ -1,4 +1,3 @@
-import { async } from 'regenerator-runtime'
 import request from 'superagent'
 
 export async function postWalkerDetails(objWalkerDetail) {

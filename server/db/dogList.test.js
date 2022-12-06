@@ -20,7 +20,7 @@ describe('db functions', () => {
     expect.assertions(2)
 
     return getDogList(testDb).then((dogList) => {
-      expect(dogList).toHaveLength(10)
+      expect(dogList).toHaveLength(9)
       expect(dogList[0].dogName).toBe('Lilly')
     })
   })
