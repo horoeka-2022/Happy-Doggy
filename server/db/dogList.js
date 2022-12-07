@@ -5,6 +5,7 @@ module.exports = {
   addWalkerRequest,
   getImgUrl,
   addPost,
+  getDogListById,
 }
 
 function getDogList(db = connection) {
@@ -21,6 +22,10 @@ function getDogList(db = connection) {
       'url'
     )
     .orderBy('availibility', 'asc')
+}
+
+function getDogListById(id, db = connection) {
+  return db('dogList').where('id', id).select('owner_id as ownerId').first()
 }
 
 function addWalkerRequest(description, auth0Id, db = connection) {

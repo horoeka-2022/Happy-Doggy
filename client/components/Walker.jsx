@@ -4,7 +4,7 @@ import { useParams, NavLink, useNavigate } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
 
 function Walker() {
-  const dogId = useParams()
+  const { id } = useParams()
   const navigate = useNavigate()
   const { isAuthenticated, loginWithRedirect, user } = useAuth0()
 
@@ -12,8 +12,9 @@ function Walker() {
   const [msg, setMessage] = useState('')
 
   useEffect(() => {
-    fetchImgUrl(dogId)
+    fetchImgUrl({ id })
       .then((url) => {
+        console.log(url)
         setDogImgUrl(() => url.body)
       })
       .catch((err) => {
@@ -34,6 +35,7 @@ function Walker() {
     event.preventDefault()
 
     const emailRequest = {
+      walkerId: id,
       to: user.email,
       from: 'happy.4.doggy@gmail.com',
       subject: 'Booking request recieved',
