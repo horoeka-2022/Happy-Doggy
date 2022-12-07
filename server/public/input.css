@@ -141,6 +141,7 @@ a.btn,
   text-decoration: none;
   border: none;
   cursor: pointer;
+  transition: 0.2s linear;
 }
 
 /* About Page */
@@ -253,6 +254,14 @@ a.btn,
   background-color: rgba(250, 215, 255, 0.7);
 }
 
+button {
+  transition: 0.2s linear;
+}
+
+button:hover:hover {
+  background-color: rgba(250, 215, 255, 0.7);
+}
+
 .doglist-item p:not(:first-child) {
   margin-top: 1rem;
 }
@@ -281,6 +290,10 @@ a.btn-book {
 }
 
 a.btn-book:hover {
+  background-color: rgba(250, 215, 255, 0.7);
+}
+
+a.btn:hover {
   background-color: rgba(250, 215, 255, 0.7);
 }
 
