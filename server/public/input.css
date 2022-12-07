@@ -71,7 +71,7 @@ body {
 .heading-primary {
   text-align: center;
   margin-top: 2.5rem;
-  font-size: 3.5rem;
+  font-size: 3.8rem;
 }
 
 .heading-secondary {
@@ -79,7 +79,7 @@ body {
 }
 
 .heading-tertiary {
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin-top: 1rem;
 }
 
@@ -130,7 +130,7 @@ a.btn, .btn {
 }
 
 .about-paragraph {
-  font-size: 2rem;
+  font-size: 3rem;
   width: 85%;
   display: block;
   background-color: #ffbd5970;
@@ -164,7 +164,7 @@ a.btn, .btn {
 }
 
 .paragraph {
-  font-size: 2.2rem;
+  font-size: 2.8rem;
 }
 
 /* Profile Form */
@@ -218,7 +218,7 @@ a.btn, .btn {
 }
 
 .doglist-item {
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding: 2rem;
   background-color: #ffbd5970;
   transition: 0.2s linear;
@@ -247,7 +247,7 @@ a.btn, .btn {
 }
 
 .info-container p {
-  font-size: 2rem;
+  font-size: 2.8rem;
 }
 
 a.btn-book {
@@ -261,8 +261,8 @@ a.btn-book:hover {
 }
 
 .dog-img {
-  min-height: 20rem;
-  max-height: 30rem;
+  min-height: 30rem;
+  max-height: 40rem;
   object-fit: cover;
 }
 
@@ -277,4 +277,9 @@ a.btn-book:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* Walker Form */
+.h2-class {
+  font-size: 2.5rem;
 }
