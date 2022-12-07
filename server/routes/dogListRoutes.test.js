@@ -33,9 +33,11 @@ test('GET /v1/doglist/ should return a list of dogs & availibility on the left',
         {
           breed: 'Pug',
           dogName: 'Robert',
-          fullName: 'cj',
-          phoneNumber: '02123213',
-          address: '12 morgan street',
+          user_metadata: {
+            address: '12 morgan street',
+            fullName: 'cj',
+            phoneNumber: '02123213',
+          },
         },
       ])
       // expect(true).toBeTruthy()
