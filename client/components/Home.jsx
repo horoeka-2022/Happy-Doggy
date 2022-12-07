@@ -16,7 +16,7 @@ export default function Home() {
     e.preventDefault()
     loginWithRedirect()
   }
-  
+
   return (
     <>
       <h1 className="heading heading-primary">{welcomeMsg}</h1>
@@ -48,7 +48,7 @@ export default function Home() {
             Click me!!
           </NavLink>
         </div>
-        <div className="card card-walker">
+        <div className="card">
           <img
             className="card-img"
             src="/server/public/images/walker-card.jpg"

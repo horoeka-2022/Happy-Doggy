@@ -46,7 +46,6 @@ body {
 .links {
   display: flex;
   gap: 2rem;
-  
 }
 
 .links a {
@@ -94,9 +93,23 @@ body {
   border-radius: 3rem;
   margin-top: 3rem;
   flex: 0 1 45%;
-  background-color: #ffbd5970;
+  background-color: #ffbd5990;
   text-align: center;
   padding: 2rem 1rem;
+}
+
+.card-walker {
+  margin-top: 0;
+  flex-basis: 60%;
+}
+
+.card-confirm {
+  padding: 5rem;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .card-img {
@@ -109,9 +122,16 @@ body {
   margin-top: 1rem;
 }
 
-a.btn, .btn {
+.walker-text {
+  padding: 1.5rem;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+
+a.btn,
+.btn {
   display: block;
-  margin: 4rem auto 0;
+  margin: 3rem auto 0;
   padding: 2rem 2rem;
   width: 20rem;
   background-color: aliceblue;
@@ -131,9 +151,9 @@ a.btn, .btn {
 
 .about-paragraph {
   font-size: 3rem;
-  width: 85%;
+  width: 90%;
   display: block;
-  background-color: #ffbd5970;
+  background-color: #ffbd5990;
   margin: 2rem auto 0;
   padding: 2rem 3rem;
   border-radius: 2rem;
@@ -145,19 +165,18 @@ a.btn, .btn {
   text-align: center;
   gap: 3rem;
   margin-top: 3rem;
-
 }
 
 .about-card {
-  background-color: #ffbd5970;
+  background-color: #ffbd5990;
   padding: 2rem 1rem;
   border-radius: 3rem;
-  flex: 0 1 30%
+  flex: 0 1 30%;
 }
 
 .about-img {
-  width: 40rem;
-  height: 40rem;
+  width: 30rem;
+  height: 30rem;
   object-fit: cover;
   border-radius: 7rem;
   margin: 2rem 0;
@@ -170,8 +189,8 @@ a.btn, .btn {
 /* Profile Form */
 .profile-form {
   width: 60%;
-  margin: 5rem auto;
-  background-color: #ffbd5970;
+  margin: 3rem auto;
+  background-color: #ffbd5990;
   padding: 5rem 10rem;
   font-size: 2.5rem;
 }
@@ -194,15 +213,20 @@ a.btn, .btn {
   font-size: 2.5rem;
 }
 
-.input-box__input[name="needs"], .input-box__input[name="introduction"]{
+.input-box__input[name='needs'],
+.input-box__input[name='introduction'] {
   height: 10rem;
 }
 
 /* Dog List */
+.heading-doglist {
+  margin-top: 1rem;
+}
+
 .doglist-container {
   display: flex;
   background-color: #ffbd5980;
-  height: 70vh;
+  height: 68vh;
   margin-top: 3rem;
   border-radius: 3rem;
 }
@@ -213,14 +237,14 @@ a.btn, .btn {
   flex-direction: column;
   gap: 2rem;
   background-color: rgba(250, 215, 255, 0.7);
-  overflow-y:scroll;
+  overflow-y: scroll;
   border-radius: 3rem;
 }
 
 .doglist-item {
   font-size: 2.5rem;
   padding: 2rem;
-  background-color: #ffbd5970;
+  background-color: #ffbd5990;
   transition: 0.2s linear;
   cursor: pointer;
 }
@@ -241,9 +265,9 @@ a.btn, .btn {
 .info-container {
   position: relative;
   padding: 5rem;
-  height: 70vh;
+  height: 68vh;
   text-align: center;
-  overflow-y:scroll;
+  overflow-y: scroll;
 }
 
 .info-container p {
@@ -282,4 +306,10 @@ a.btn-book:hover {
 /* Walker Form */
 .h2-class {
   font-size: 2.5rem;
+}
+
+/* Confirm Form */
+.confirm-paragraph {
+  font-size: 3rem;
+  padding: 5rem;
 }

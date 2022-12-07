@@ -54,25 +54,26 @@ function Walker() {
       <br /> <br />
       <br />
       <div className="card-container">
-        <div className="card card-owner">
+        <div className="card card-walker">
           <img className="card-img" src={dogImgUrl} alt="doggy" />
           <form onSubmit={handleSubmit}>
             <section className="flex flex-col gap-4">
               <br /> <br />
               <label htmlFor="review">
                 <h2 className="h2-class">
-                  Let us know why you would like to walk this Happy Doggy, and a
-                  bit about your experience with dogs &#128062;
+                  Let us know why you would like to walk this Happy Doggy
+                  &#128062;
                 </h2>
               </label>
               <div>
                 <textarea
-                  rows="15"
-                  cols="80"
+                  className="walker-text"
+                  rows="5"
+                  cols="50"
                   value={msg}
                   onChange={handleChange}
                   name="walkerReason"
-                  placeholder="I would love to walk this dog because...."
+                  placeholder="Please tell the owner your name, phone number, and why you wanna walk with me :)"
                 ></textarea>
               </div>
               <NavLink

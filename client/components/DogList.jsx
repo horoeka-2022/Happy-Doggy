@@ -31,7 +31,7 @@ function DogList() {
 
   return (
     <>
-      <h1 className="heading heading-primary">
+      <h1 className="heading heading-primary heading-doglist">
         Find your cute walking partner
       </h1>
       <div className="doglist-container">
@@ -66,6 +66,7 @@ function DogList() {
                 <p>Location: {doglist[0].suburb}</p>
 
                 <p>Available Date: {doglist[0].availibility}</p>
+                <p>Needs: {doglist[0].needs}</p>
                 <p className="dog-description">
                   Introduction: {doglist[0].description}
                 </p>
@@ -94,6 +95,7 @@ function DogList() {
               <p>Location: {doginfo.suburb}</p>
 
               <p>Available Date: {doginfo.availibility}</p>
+              <p>Needs: {doginfo.needs}</p>
               <p className="dog-description">
                 Introduction: {doginfo.description}
               </p>
