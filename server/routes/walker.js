@@ -10,7 +10,6 @@ router.post('/:id', async (req, res) => {
   try {
     const { id } = req.body
     const dogUrl = await db.getImgUrl(id)
-    console.log(dogUrl)
     res.json(dogUrl[0].url)
   } catch (err) {
     res.status(500).send(err.message)
