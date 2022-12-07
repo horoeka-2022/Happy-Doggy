@@ -10,7 +10,7 @@ import { getDogList } from '../apiClient'
 
 jest.mock('../apiClient')
 
-test('when the Dog List is rendered, Lilly should be the name of the dog pictured', async () => {
+test('when the Dog List page is rendered, Lilly should be the name of the first dog pictured', async () => {
   // ARRANGE
   getDogList.mockImplementation(() => {
     return Promise.resolve([
@@ -39,8 +39,8 @@ test('when the Dog List is rendered, Lilly should be the name of the dog picture
   )
   //await
   //ACT
-  const doggyname = await screen.findByText(/Lilly/i)
+  const doggyname = await screen.findAllByText(/Lilly/i)
 
   // ASSERT
-  expect(doggyname).toBeInTheDocument()
+  expect(doggyname[0]).toBeInTheDocument()
 })

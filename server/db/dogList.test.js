@@ -16,7 +16,7 @@ afterAll(() => {
 })
 
 describe('db functions', () => {
-  test('it should return a list of dogs and their details', () => {
+  test('it should return a list of dogs from our database and displays them on the left side of the screen', () => {
     expect.assertions(2)
 
     return getDogList(testDb).then((dogList) => {

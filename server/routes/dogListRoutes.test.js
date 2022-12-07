@@ -10,7 +10,7 @@ jest.mock('../db/dogList')
 jest.mock('../auth0')
 //mocking the path?
 //write the test
-test('GET /v1/doglist/ should return a list of dogs', () => {
+test('GET /v1/doglist/ should return a list of dogs & availibility on the left', () => {
   //getDogList in server routes db js
   db.getDogList.mockImplementation(() => {
     return Promise.resolve([{ breed: 'Pug', dogName: 'Robert' }])

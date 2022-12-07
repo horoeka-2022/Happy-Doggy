@@ -60,15 +60,15 @@ function Walker() {
             <section className="flex flex-col gap-4">
               <br /> <br />
               <label htmlFor="review">
-                <h2>
-                  Why I want to walk this Happy Doggy, and my experience with
-                  dogs.
+                <h2 className="h2-class">
+                  Let us know why you would like to walk this Happy Doggy, and a
+                  bit about your experience with dogs &#128062;
                 </h2>
               </label>
               <div>
                 <textarea
-                  rows="4"
-                  cols="50"
+                  rows="15"
+                  cols="80"
                   value={msg}
                   onChange={handleChange}
                   name="walkerReason"
