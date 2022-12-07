@@ -6,8 +6,6 @@ import { MemoryRouter as Router } from 'react-router-dom'
 import '@testing-library/jest-dom'
 import { getDogList } from '../apiClient'
 
-//import { async } from 'regenerator-runtime'
-
 jest.mock('../apiClient')
 
 test('when the Dog List page is rendered, Lilly should be the name of the first dog pictured', async () => {
@@ -37,7 +35,7 @@ test('when the Dog List page is rendered, Lilly should be the name of the first 
       <DogList />
     </Router>
   )
-  //await
+
   //ACT
   const doggyname = await screen.findAllByText(/Lilly/i)
 

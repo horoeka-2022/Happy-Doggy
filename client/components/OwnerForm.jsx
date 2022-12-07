@@ -33,13 +33,15 @@ export default function OwnerForm() {
         <h2 className="heading heading-secondary">Tell me about your dog!!</h2>
         <div className="form-container">
           <div className="input-box">
-            <label htmlFor="fullName">Dog Name</label>
+            <label htmlFor="dogName">Dog Name</label>
             <input
+              data-testid="dogName"
               type="text"
               name="dogName"
               className="input-box__input"
               value={form.dogName}
               onChange={handleChange}
+              placeholder="e.g Freddie"
               required
             />
           </div>
@@ -51,10 +53,11 @@ export default function OwnerForm() {
               className="input-box__input"
               value={form.breed}
               onChange={handleChange}
+              placeholder="e.g Golden Retriever"
               required
             />
           </div>
-          <div className="input-box">
+          <div className="inpudisplay a form with the correct number of text inputst-box">
             <label htmlFor="dogImage">Put your dog image url here!</label>
             <input
               type="text"
@@ -62,6 +65,7 @@ export default function OwnerForm() {
               className="input-box__input"
               value={form.dogImage}
               onChange={handleChange}
+              // placeholder="Insert Img"
               required
             />
           </div>
@@ -73,6 +77,7 @@ export default function OwnerForm() {
               className="input-box__input"
               value={form.suburb}
               onChange={handleChange}
+              placeholder="e.g Newmarket"
               required
             />
           </div>
@@ -97,6 +102,7 @@ export default function OwnerForm() {
               className="input-box__input"
               value={form.needs}
               onChange={handleChange}
+              placeholder="e.g Needs long walks"
               required
             />
           </div>
@@ -110,6 +116,7 @@ export default function OwnerForm() {
               className="input-box__input"
               value={form.introduction}
               onChange={handleChange}
+              placeholder="e.g My doggo is the best doggo!"
               required
             />
           </div>
