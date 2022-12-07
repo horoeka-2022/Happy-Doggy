@@ -73,5 +73,17 @@ exports.seed = async (knex) => {
         suburb: 'Grey Lynn, Auckland',
         url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbIXwY8KsuopM9V5s90xbD3FNwkpEbGb_uRQ&usqp=CAU',
       },
+      {
+        id: 11,
+
+        dog_name: 'Elvin',
+        breed: 'Half Human',
+        needs: 'Lots of food',
+        availibility: '2022-12-25',
+        description: 'Elvin loves eating and playing with a ball!!',
+        owner_id: 'google-oauth2|113301659580344248281',
+        suburb: 'Auckland CBD, Auckland',
+        url: 'https://www.readersdigest.co.nz/wp-content/uploads/sites/3/2021/10/15-dog-beanie-GettyImages-114516871-770.jpg',
+      },
     ])
 }
