@@ -33,7 +33,7 @@ export default function OwnerForm() {
         <h2 className="heading heading-secondary">Tell me about your dog!!</h2>
         <div className="form-container">
           <div className="input-box">
-            <label htmlFor="fullName">Dog Name</label>
+            <label htmlFor="dogName">Dog Name</label>
             <input
               type="text"
               name="dogName"
