@@ -14,12 +14,11 @@ function Profile() {
     getAccessTokenSilently()
       .then(getUser)
       .then((userDetails) => {
+        console.log(userDetails)
         setForm(() => ({
-          fullName: userDetails ? userDetails?.user_metadata?.fullName : '',
-          phoneNumber: userDetails
-            ? userDetails?.user_metadata?.phoneNumber
-            : '',
-          address: userDetails ? userDetails?.user_metadata?.address : '',
+          fullName: userDetails ? userDetails?.fullName : '',
+          phoneNumber: userDetails ? userDetails?.phoneNumber : '',
+          address: userDetails ? userDetails?.address : '',
         }))
       })
       .catch((err) => {
