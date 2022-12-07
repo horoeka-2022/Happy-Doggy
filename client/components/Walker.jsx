@@ -29,24 +29,19 @@ function Walker() {
   function handleChange(e) {
     setMessage(() => e.target.value)
   }
+
   async function handleSubmit(event) {
     event.preventDefault()
 
-    let msg = {
+    const emailRequest = {
       to: user.email,
       from: 'happy.4.doggy@gmail.com',
       subject: 'Booking request recieved',
-      text:
-        'Thanks  ' +
-        user.given_name +
-        ' for your booking, your request is sent to the Owner. We will get back to you shortly',
-      html:
-        'Thanks  ' +
-        user.given_name +
-        ' for your booking, your request is sent to the Owner. We will get back to you shortly',
+      text: `You received an email from ${user.given_name} for booking your dog`,
+      html: msg,
     }
 
-    await sendEmail(msg).catch((err) => {
+    await sendEmail(emailRequest).catch((err) => {
       console.error(err.message)
     })
     navigate('/bookingConfirmation')

@@ -13,7 +13,6 @@ function DogList() {
     getDogList()
       .then((result) => {
         setDoglist(() => result)
-        // console.log(result)
       })
       .catch((err) => {
         console.error(err.message)

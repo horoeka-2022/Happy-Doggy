@@ -22,7 +22,6 @@ export async function fetchImgUrl(id) {
   return request.post(`/api/v1/walker/${id}`).send(id)
 }
 
-export async function sendEmail(msg) {
-  console.log('yo' + { msg })
-  return await request.post(`/api/v1/sendemail`).send(msg)
+export async function sendEmail(emailRequest) {
+  return await request.post(`/api/v1/sendEmail`).send(emailRequest)
 }

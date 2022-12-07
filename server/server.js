@@ -16,7 +16,7 @@ server.use('/api/v1/users', userRoutes)
 server.use('/api/v1/doglist', dogListRoute)
 server.use('/api/v1/walker', walkerRoute)
 server.use('/api/v1/ownerform', ownerRoute)
-server.use('/api/v1/sendemail', sendEmail)
+server.use('/api/v1/sendEmail', sendEmail)
 
 server.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'index.html'))

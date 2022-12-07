@@ -12,16 +12,16 @@ module.exports = router
 
 router.post('/', async (req, res) => {
   try {
-    console.log(req.body)
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+    await sgMail.setApiKey(process.env.SENDGRID_API_KEY)
     const msg = {
       to: req.body.to,
       from: req.body.from,
       subject: req.body.subject,
-      text: req.body.msg,
-      html: req.body.msg,
+      text: req.body.text,
+      html: req.body.html,
     }
-    await sgMail.send(req.body)
+    console.log(msg)
+    await sgMail.send(msg)
     res.sendStatus(201)
   } catch (err) {
     res.status(500).send(err.message)
