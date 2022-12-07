@@ -41,7 +41,7 @@ const management = new ManagementClient({
 
 async function getUser(id) {
   const user = await management.getUser({ id })
-  return user.user_metadata
+  return { ...user.user_metadata.user_metadata, email: user.email }
 }
 
 async function updateUser(id, userDetails) {
