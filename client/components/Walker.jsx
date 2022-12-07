@@ -12,7 +12,7 @@ function Walker() {
   const [msg, setMessage] = useState('')
 
   useEffect(() => {
-    fetchImgUrl(id)
+    fetchImgUrl({ id })
       .then((url) => {
         console.log(url)
         setDogImgUrl(() => url.body)

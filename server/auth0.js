@@ -45,7 +45,6 @@ async function getUser(id) {
 }
 
 async function updateUser(id, userDetails) {
-  console.log(userDetails)
   await management.updateUserMetadata(
     { id },
     { user_metadata: { ...userDetails } }

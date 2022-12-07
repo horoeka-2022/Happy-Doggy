@@ -19,6 +19,7 @@ export async function getDogList() {
 }
 
 export async function fetchImgUrl(id) {
+  console.log(id)
   return request.post(`/api/v1/walker/${id}`).send(id)
 }
 
