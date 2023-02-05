@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
+import homeImg1 from '../../server/public/images/owner-card.jpg'
+import homeImg2 from '../../server/public/images/walker-card.jpg'
 
 export default function Home() {
   const { isAuthenticated, loginWithRedirect, user } = useAuth0()
@@ -29,11 +31,7 @@ export default function Home() {
       </p>
       <div className="card-container">
         <div className="card card-owner">
-          <img
-            className="card-img"
-            src="/server/public/images/owner-card.jpg"
-            alt="a dog being loved"
-          />
+          <img className="card-img" src={homeImg1} alt="a dog being loved" />
           <h3 className="heading heading-tertiary">
             for owners / happy doggies
           </h3>
@@ -51,7 +49,7 @@ export default function Home() {
         <div className="card">
           <img
             className="card-img"
-            src="/server/public/images/walker-card.jpg"
+            src={homeImg2}
             alt="two happy dogs walking"
           />
           <h3 className="heading heading-tertiary">for walkers</h3>
