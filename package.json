@@ -4,6 +4,8 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
+    "start": "run-p dev:client server",
+    "server": "node server/index.js",
     "dev": "run-p dev:server dev:client",
     "dev:server": "nodemon --watch server server/index.js",
     "dev:client": "vite",
