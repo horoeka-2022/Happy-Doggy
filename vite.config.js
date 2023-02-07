@@ -10,7 +10,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api/v1': {
-        target: 'https://happy-doggy-bqya.vercel.app/',
+        target: 'https://happy-doggy-bqya.vercel.app',
         changeOrigin: true,
       },
     },
