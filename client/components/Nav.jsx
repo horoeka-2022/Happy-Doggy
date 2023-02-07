@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
 import { IfAuthenticated, IfNotAuthenticated } from './Authenticated'
+import logo from '../../server/public/images/logo.png'
 
 function Nav() {
   const { logout, loginWithRedirect } = useAuth0()
@@ -29,11 +30,7 @@ function Nav() {
         <nav className="nav">
           <div className="rounded-full ...">
             <Link className="logo" to="/">
-              <img
-                src={'/server/public/images/logo.png'}
-                alt="dog pic"
-                className="nav-logo"
-              />
+              <img src={logo} alt="dog pic" className="nav-logo" />
             </Link>
           </div>
 

@@ -12,6 +12,7 @@ function DogList() {
   useEffect(() => {
     getDogList()
       .then((result) => {
+        console.log(result)
         setDoglist(() => result)
       })
       .catch((err) => {

@@ -1,4 +1,7 @@
 import React from 'react'
+import aboutImg1 from '../../server/public/images/dog-and-owner.jpeg'
+import aboutImg2 from '../../server/public/images/sassy_hazel.jpg'
+import aboutImg3 from '../../server/public/images/Happy_woman.jpeg'
 
 export default function About() {
   return (
@@ -9,7 +12,7 @@ export default function About() {
           <h2 className="heading-secondary">Happy Owners!</h2>
           <img
             className="about-img"
-            src="./server/public/images/dog-and-owner.jpeg"
+            src={aboutImg1}
             alt="happy dog and owner"
           />
           <p className="paragraph">
@@ -22,7 +25,7 @@ export default function About() {
           <h2 className="heading-secondary">Happy Dogs!</h2>
           <img
             className="about-img"
-            src="./server/public/images/sassy_hazel.jpg"
+            src={aboutImg2}
             alt="happy dog about to go for a walk"
           />
           <p className="paragraph">
@@ -35,7 +38,7 @@ export default function About() {
           <h2 className="heading-secondary">Happy Walkers!</h2>
           <img
             className="about-img"
-            src="./server/public/images/Happy_woman.jpeg"
+            src={aboutImg3}
             alt="happy dog spending time with a new friend"
           ></img>
           <p className="paragraph">
