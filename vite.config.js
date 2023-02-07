@@ -12,6 +12,8 @@ export default defineConfig({
       '/api/v1': {
         target: 'https://happy-doggy-7l2b.vercel.app',
         changeOrigin: true,
+        secure: false,
+        ws: true,
       },
     },
   },
