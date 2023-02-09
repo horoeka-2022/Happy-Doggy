@@ -1,0 +1,21 @@
+# GET https://happy-doggy-eight.vercel.app/api/v1/doglist
+
+
+
+GET http://localhost:5173/api/v1/doglist
+
+###
+
+GET http://localhost:3000/api/v1/doglist
+
+###
+
+GET http://localhost:3000/api/v1/ping
+
+###
+
+GET http://localhost:3001/api/v1/doglist
+
+###
+
+GET http://localhost:3000/api/v1/ping

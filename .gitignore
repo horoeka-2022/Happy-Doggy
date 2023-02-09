@@ -5,3 +5,5 @@ bundle.*
 .env
 server/public/output.css
 sendgrid.env
+dist
+server/public/assets
