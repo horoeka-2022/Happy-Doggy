@@ -21,7 +21,11 @@ server.use('/api/v1/ownerform', ownerRoute)
 server.use('/api/v1/sendEmail', sendEmail)
 
 server.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'index.html'))
+  if (process.env.NODE_ENV === 'production') {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'))
+  } else {
+    res.sendFile(path.join(__dirname, '..', 'index.html'))
+  }
 })
 
 module.exports = server

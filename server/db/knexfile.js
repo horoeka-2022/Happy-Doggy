@@ -46,18 +46,16 @@ module.exports = {
   },
 
   production: {
-    client: 'postgresql',
+    client: 'sqlite3',
+    useNullAsDefault: true,
     connection: {
-      database: 'my_db',
-      user: 'username',
-      password: 'password',
-    },
-    pool: {
-      min: 2,
-      max: 10,
+      filename: path.join(__dirname, 'dev.sqlite3'),
     },
     migrations: {
-      tableName: 'knex_migrations',
+      directory: path.join(__dirname, 'migrations'),
+    },
+    seeds: {
+      directory: path.join(__dirname, 'seeds'),
     },
   },
 }
