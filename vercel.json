@@ -1,5 +1,5 @@
 {
   "version": 2,
   "name": "happy-doggy",
-  "rewrites": [{ "source": "/server/routes/(.*)", "destination": "/api/v1" }]
+  "rewrites": [{ "source": "/server/server.js", "destination": "/" }]
 }
