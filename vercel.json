@@ -1,4 +1,5 @@
 {
   "version": 2,
-  "name": "happy-doggy"
+  "name": "happy-doggy",
+  "rewrites": [{ "source": "/server/routes/(.*)", "destination": "/api/v1" }]
 }
