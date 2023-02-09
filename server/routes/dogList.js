@@ -10,14 +10,14 @@ module.exports = router
 // GET /api/v1/doglist
 router.get('/', async (req, res) => {
   try {
-    // const dogLists = await db.getDogList()
-    // const newDogLists = await Promise.all(
-    //   dogLists.map(async (dogList) => {
-    //     const ownerDetails = await management.getUser(dogList.ownerId)
-    //     return { ...dogList, ...ownerDetails }
-    //   })
-    // )
-    res.json({ test: 'hello' })
+    const dogLists = await db.getDogList()
+    const newDogLists = await Promise.all(
+      dogLists.map(async (dogList) => {
+        const ownerDetails = await management.getUser(dogList.ownerId)
+        return { ...dogList, ...ownerDetails }
+      })
+    )
+    res.json(newDogLists)
   } catch (err) {
     res.status(500).send(err.message)
     console.error(err.message)
