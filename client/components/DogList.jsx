@@ -20,6 +20,11 @@ function DogList() {
       })
   }, [])
 
+  function extractDate(date) {
+    let newDate = date.slice(0, 10)
+    return newDate
+  }
+
   async function handleClick(id) {
     const selectedDog = await doglist.find((el) => el.id === id)
     setDogInfo(selectedDog)
@@ -47,7 +52,9 @@ function DogList() {
                 <p className="item-name">Name: {item.dogName}</p>
                 <p className="item-breed">Breed: {item.breed}</p>
                 <p className="item-location">Location: {item.suburb}</p>
-                <p className="item-date">Available Date: {item.availibility}</p>
+                <p className="item-date">
+                  Available Date: {extractDate(item.availibility)}
+                </p>
               </li>
             )
           })}
