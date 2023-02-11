@@ -48,7 +48,9 @@ function DogList() {
                 <p className="item-breed">Breed: {item.breed}</p>
                 <p className="item-location">Location: {item.suburb}</p>
 
-                <p className="item-date">Available Date: {item.availibility}</p>
+                <p className="item-date">
+                  Available Date: {item.availibility.substring(0, 10)}
+                </p>
               </li>
             )
           })}
