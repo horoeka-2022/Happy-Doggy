@@ -11,17 +11,9 @@ function DogList() {
 
   useEffect(() => {
     getDogList()
-      // .then((result) => {
-      //   console.log(result)
-      //   let newResult = result.map((el) => ({
-      //     ...el,
-      //     availibility: el.availibility.substring(0, 10),
-      //   }))
-      //   return newResult
-      // })
-      .then((newResult) => {
-        console.log(newResult)
-        setDoglist(() => newResult)
+      .then((result) => {
+        console.log(result)
+        setDoglist(() => result)
       })
       .catch((err) => {
         console.error(err.message)
