@@ -13,7 +13,15 @@ function DogList() {
     getDogList()
       .then((result) => {
         console.log(result)
-        setDoglist(() => result)
+        let newResult = result.map((el) => ({
+          ...el,
+          availibility: el.availibility.substring(0, 10),
+        }))
+        return newResult
+      })
+      .then((newResult) => {
+        console.log(newResult)
+        setDoglist(() => newResult)
       })
       .catch((err) => {
         console.error(err.message)
@@ -48,9 +56,7 @@ function DogList() {
                 <p className="item-breed">Breed: {item.breed}</p>
                 <p className="item-location">Location: {item.suburb}</p>
 
-                <p className="item-date">
-                  Available Date: {item.availibility.slice(0, 10)}
-                </p>
+                <p className="item-date">Available Date: {item.availibility}</p>
               </li>
             )
           })}
