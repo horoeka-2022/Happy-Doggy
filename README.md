@@ -1,3 +1,3 @@
-# boilerplate
+# Welcome to Happy Doggy!!
 
-vite, tailwind, express, Redux toolkit, react, auth0
+This is SPA that helps dog walkers and dog owners find each other using React, RESTful APIs, Knex, SQLite3, Express and Jest. Dog owners can post and display photos and details of their dogs and the walkers can send booking forms.
